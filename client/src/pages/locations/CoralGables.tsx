@@ -1,0 +1,4 @@
+import LocationPage from "@/components/LocationPage";
+export default function CoralGables() {
+  return <LocationPage city="Coral Gables" description="Premium accounting and financial advisory services for Coral Gables professionals and businesses." intro="Coral Gables is known for its elegance, its thriving business district, and its discerning professionals. ASAP Accounting provides the premium-level financial services that Coral Gables clients expect — with the personal attention that sets us apart." details={["From the offices along Miracle Mile to the professional firms throughout the Gables, we serve attorneys, physicians, consultants, and business owners who demand accuracy, discretion, and proactive financial guidance.","Our services include comprehensive tax planning, business advisory, and wealth management support designed for high-earning professionals and established businesses in the Coral Gables area."]} />;
+}

@@ -1,0 +1,4 @@
+import LocationPage from "@/components/LocationPage";
+export default function Kendall() {
+  return <LocationPage city="Kendall" description="Reliable accounting and tax preparation services for Kendall residents and businesses in South Miami-Dade." intro="Kendall's growing community of families and businesses deserves accessible, professional accounting services. ASAP Accounting serves Kendall clients with the same personalized attention and expertise we bring to all of South Florida." details={["Whether you own a business along Kendall Drive, work from home in one of Kendall's residential communities, or simply need help with personal tax preparation, we provide convenient, professional service tailored to your needs.","Our virtual consultation options make it easy for Kendall residents to access expert accounting and tax services without the commute. We also offer in-person meetings at our Doral office for clients who prefer face-to-face interaction."]} />;
+}
