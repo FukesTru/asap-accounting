@@ -2,6 +2,8 @@ import { Link } from "wouter";
 import { ArrowRight, Calculator, FileText, TrendingUp, DollarSign, Shield, PiggyBank, Heart } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
+const inputClass = "w-full bg-white border-0 border-b-2 border-gray-200 px-0 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[oklch(0.62_0.12_75)] transition-colors duration-200";
+
 function ConsultationForm() {
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
@@ -11,23 +13,37 @@ function ConsultationForm() {
   }
   if (submitted) {
     return (
-      <div className="text-center py-8">
-        <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center mx-auto mb-4">
-          <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+      <div className="text-center py-10">
+        <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5" style={{backgroundColor: 'oklch(0.62 0.12 75 / 0.12)'}}>
+          <svg className="w-7 h-7" style={{color: 'oklch(0.62 0.12 75)'}} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
         </div>
-        <p className="font-serif text-charcoal text-xl mb-2">Thank You</p>
-        <p className="text-charcoal/60 text-sm">We will be in touch shortly to confirm your consultation.</p>
+        <p className="font-serif text-gray-900 text-2xl mb-2">Thank You</p>
+        <p className="text-gray-500 text-sm leading-relaxed">We will be in touch shortly to confirm your consultation.</p>
       </div>
     );
   }
   return (
-    <form onSubmit={handleSubmit} className="space-y-3">
-      <input required type="text" placeholder="Full Name" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} className="w-full border border-gray-300 px-3 py-2.5 text-sm text-gray-900 placeholder-gray-400 bg-white focus:outline-none focus:border-[oklch(0.62_0.12_75)]" />
-      <input required type="email" placeholder="Email Address" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} className="w-full border border-gray-300 px-3 py-2.5 text-sm text-gray-900 placeholder-gray-400 bg-white focus:outline-none focus:border-[oklch(0.62_0.12_75)]" />
-      <input type="tel" placeholder="Phone (optional)" value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} className="w-full border border-gray-300 px-3 py-2.5 text-sm text-gray-900 placeholder-gray-400 bg-white focus:outline-none focus:border-[oklch(0.62_0.12_75)]" />
-      <textarea placeholder="How can we help you?" rows={3} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} className="w-full border border-gray-300 px-3 py-2.5 text-sm text-gray-900 placeholder-gray-400 bg-white focus:outline-none focus:border-[oklch(0.62_0.12_75)] resize-none" />
-      <button type="submit" style={{backgroundColor: 'oklch(0.62 0.12 75)', color: '#ffffff'}} className="w-full py-3 text-sm font-sans font-semibold tracking-wider uppercase hover:opacity-90 transition-opacity">Request Free Consultation</button>
-      <p className="text-center text-gray-500 text-xs">No obligation. Bilingual: English &amp; Spanish.</p>
+    <form onSubmit={handleSubmit} className="space-y-5">
+      <div>
+        <label className="block text-xs font-semibold text-gray-500 uppercase tracking-widest mb-1">Full Name</label>
+        <input required type="text" placeholder="Jane Smith" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} className={inputClass} />
+      </div>
+      <div>
+        <label className="block text-xs font-semibold text-gray-500 uppercase tracking-widest mb-1">Email Address</label>
+        <input required type="email" placeholder="jane@company.com" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} className={inputClass} />
+      </div>
+      <div>
+        <label className="block text-xs font-semibold text-gray-500 uppercase tracking-widest mb-1">Phone <span className="normal-case font-normal">(optional)</span></label>
+        <input type="tel" placeholder="(305) 000-0000" value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} className={inputClass} />
+      </div>
+      <div>
+        <label className="block text-xs font-semibold text-gray-500 uppercase tracking-widest mb-1">How Can We Help?</label>
+        <textarea placeholder="Tell us about your needs..." rows={3} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} className={inputClass + " resize-none"} />
+      </div>
+      <div className="pt-2">
+        <button type="submit" className="w-full py-4 text-sm font-sans font-semibold tracking-[0.12em] uppercase transition-opacity hover:opacity-90" style={{backgroundColor: 'oklch(0.62 0.12 75)', color: '#ffffff'}}>Request Free Consultation</button>
+        <p className="text-center text-gray-400 text-xs mt-3">No obligation &nbsp;&bull;&nbsp; English &amp; Spanish</p>
+      </div>
     </form>
   );
 }
