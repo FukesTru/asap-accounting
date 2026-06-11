@@ -1,6 +1,36 @@
 import { Link } from "wouter";
 import { ArrowRight, Calculator, FileText, TrendingUp, DollarSign, Shield, PiggyBank, Heart } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
+function ConsultationForm() {
+  const [submitted, setSubmitted] = useState(false);
+  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setSubmitted(true);
+  }
+  if (submitted) {
+    return (
+      <div className="text-center py-8">
+        <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center mx-auto mb-4">
+          <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+        </div>
+        <p className="font-serif text-charcoal text-xl mb-2">Thank You</p>
+        <p className="text-charcoal/60 text-sm">We will be in touch shortly to confirm your consultation.</p>
+      </div>
+    );
+  }
+  return (
+    <form onSubmit={handleSubmit} className="space-y-3">
+      <input required type="text" placeholder="Full Name" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} className="w-full border border-border px-3 py-2.5 text-sm text-charcoal bg-white focus:outline-none focus:border-gold" />
+      <input required type="email" placeholder="Email Address" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} className="w-full border border-border px-3 py-2.5 text-sm text-charcoal bg-white focus:outline-none focus:border-gold" />
+      <input type="tel" placeholder="Phone (optional)" value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} className="w-full border border-border px-3 py-2.5 text-sm text-charcoal bg-white focus:outline-none focus:border-gold" />
+      <textarea placeholder="How can we help you?" rows={3} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} className="w-full border border-border px-3 py-2.5 text-sm text-charcoal bg-white focus:outline-none focus:border-gold resize-none" />
+      <button type="submit" className="w-full bg-gold text-white py-3 text-sm font-sans tracking-wider uppercase hover:bg-gold/90 transition-colors">Request Free Consultation</button>
+      <p className="text-center text-charcoal/40 text-xs">No obligation. Bilingual: English &amp; Spanish.</p>
+    </form>
+  );
+}
 
 function useScrollReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -51,23 +81,33 @@ export default function Home() {
         </div>
 
         <div className="container relative z-10 pt-32 pb-20">
-          <div className="max-w-2xl">
-            <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.2em] mb-6 font-sans font-medium">
-              Doral, FL — Certified Public Accountant
-            </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-6">
-              Financial Clarity,<br />Done Right.
-            </h1>
-            <p className="text-white/60 text-lg leading-relaxed mb-10 max-w-lg font-light">
-              Expert accounting, tax, and financial advisory services for individuals and businesses across South Florida. Bilingual support in English and Spanish.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/book" className="btn-gold rounded-sm text-center">
-                Book a Free Consultation
-              </Link>
-              <Link href="/services" className="btn-outline-gold rounded-sm text-center">
-                Our Services
-              </Link>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: tagline */}
+            <div>
+              <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.2em] mb-6 font-sans font-medium">
+                Doral, FL — Certified Public Accountant
+              </p>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-6">
+                Financial Clarity,<br />Done Right.
+              </h1>
+              <p className="text-white/60 text-lg leading-relaxed mb-10 max-w-lg font-light">
+                Expert accounting, tax, and financial advisory services for individuals and businesses across South Florida. Bilingual support in English and Spanish.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/services" className="btn-outline-gold rounded-sm text-center">
+                  Our Services
+                </Link>
+              </div>
+            </div>
+            {/* Right: consultation form */}
+            <div className="bg-cream shadow-2xl">
+              <div className="bg-charcoal px-6 py-4">
+                <p className="text-gold font-sans text-xs tracking-[0.2em] uppercase mb-1">Free Consultation</p>
+                <p className="text-white font-serif text-xl">Book a Meeting</p>
+              </div>
+              <div className="p-6">
+                <ConsultationForm />
+              </div>
             </div>
           </div>
         </div>
