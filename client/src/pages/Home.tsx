@@ -56,7 +56,7 @@ export default function Home() {
               Doral, FL — Certified Public Accountant
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-6">
-              Financial Clarity,<br />Delivered Fast.
+              Financial Clarity,<br />Done Right.
             </h1>
             <p className="text-white/60 text-lg leading-relaxed mb-10 max-w-lg font-light">
               Expert accounting, tax, and financial advisory services for individuals and businesses across South Florida. Bilingual support in English and Spanish.
