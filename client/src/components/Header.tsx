@@ -33,7 +33,7 @@ export default function Header() {
   const [location] = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[oklch(0.15_0.01_260)] border-b border-white/10">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-sm">
       <div className="container flex items-center justify-between h-20">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
@@ -46,26 +46,26 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8">
-          <Link href="/" className={`text-sm tracking-wide transition-colors ${location === '/' ? 'text-[oklch(0.62_0.12_75)]' : 'text-white/80 hover:text-white'}`}>
+          <Link href="/" className={`text-sm tracking-wide transition-colors ${location === '/' ? 'text-[oklch(0.62_0.12_75)]' : 'text-gray-700 hover:text-gray-900'}`}>
             Home
           </Link>
-          <Link href="/about" className={`text-sm tracking-wide transition-colors ${location === '/about' ? 'text-[oklch(0.62_0.12_75)]' : 'text-white/80 hover:text-white'}`}>
+          <Link href="/about" className={`text-sm tracking-wide transition-colors ${location === '/about' ? 'text-[oklch(0.62_0.12_75)]' : 'text-gray-700 hover:text-gray-900'}`}>
             About
           </Link>
 
           {/* Services Dropdown */}
           <div className="relative group">
-            <button className={`text-sm tracking-wide transition-colors flex items-center gap-1 ${location.startsWith('/services') ? 'text-[oklch(0.62_0.12_75)]' : 'text-white/80 hover:text-white'}`}>
+            <button className={`text-sm tracking-wide transition-colors flex items-center gap-1 ${location.startsWith('/services') ? 'text-[oklch(0.62_0.12_75)]' : 'text-gray-700 hover:text-gray-900'}`}>
               Services <ChevronDown className="w-3 h-3" />
             </button>
             <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              <div className="bg-[oklch(0.15_0.01_260)] border border-white/10 rounded-sm py-2 min-w-[240px] shadow-xl">
-                <Link href="/services" className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors">
+              <div className="bg-white border border-gray-200 rounded-sm py-2 min-w-[240px] shadow-xl">
+                <Link href="/services" className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors">
                   All Services
                 </Link>
                 <div className="h-px bg-white/10 my-1" />
                 {services.map((s) => (
-                  <Link key={s.href} href={s.href} className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors">
+                  <Link key={s.href} href={s.href} className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors">
                     {s.name}
                   </Link>
                 ))}
@@ -75,13 +75,13 @@ export default function Header() {
 
           {/* Locations Dropdown */}
           <div className="relative group">
-            <button className={`text-sm tracking-wide transition-colors flex items-center gap-1 ${location.startsWith('/locations') ? 'text-[oklch(0.62_0.12_75)]' : 'text-white/80 hover:text-white'}`}>
+            <button className={`text-sm tracking-wide transition-colors flex items-center gap-1 ${location.startsWith('/locations') ? 'text-[oklch(0.62_0.12_75)]' : 'text-gray-700 hover:text-gray-900'}`}>
               Locations <ChevronDown className="w-3 h-3" />
             </button>
             <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              <div className="bg-[oklch(0.15_0.01_260)] border border-white/10 rounded-sm py-2 min-w-[200px] shadow-xl">
+              <div className="bg-white border border-gray-200 rounded-sm py-2 min-w-[200px] shadow-xl">
                 {locations.map((l) => (
-                  <Link key={l.href} href={l.href} className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors">
+                  <Link key={l.href} href={l.href} className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors">
                     {l.name}
                   </Link>
                 ))}
@@ -89,10 +89,10 @@ export default function Header() {
             </div>
           </div>
 
-          <Link href="/testimonials" className={`text-sm tracking-wide transition-colors ${location === '/testimonials' ? 'text-[oklch(0.62_0.12_75)]' : 'text-white/80 hover:text-white'}`}>
+          <Link href="/testimonials" className={`text-sm tracking-wide transition-colors ${location === '/testimonials' ? 'text-[oklch(0.62_0.12_75)]' : 'text-gray-700 hover:text-gray-900'}`}>
             Testimonials
           </Link>
-          <Link href="/contact" className={`text-sm tracking-wide transition-colors ${location === '/contact' ? 'text-[oklch(0.62_0.12_75)]' : 'text-white/80 hover:text-white'}`}>
+          <Link href="/contact" className={`text-sm tracking-wide transition-colors ${location === '/contact' ? 'text-[oklch(0.62_0.12_75)]' : 'text-gray-700 hover:text-gray-900'}`}>
             Contact
           </Link>
         </nav>
@@ -105,7 +105,7 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden text-white p-2"
+          className="lg:hidden text-gray-700 p-2"
           aria-label="Toggle menu"
         >
           {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -114,12 +114,12 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-[oklch(0.15_0.01_260)] border-t border-white/10 max-h-[80vh] overflow-y-auto">
+        <div className="lg:hidden bg-white border-t border-gray-200 max-h-[80vh] overflow-y-auto">
           <nav className="container py-6 space-y-1">
-            <Link href="/" onClick={() => setMobileOpen(false)} className="block py-3 text-white/80 hover:text-white text-sm tracking-wide">
+            <Link href="/" onClick={() => setMobileOpen(false)} className="block py-3 text-gray-700 hover:text-gray-900 text-sm tracking-wide">
               Home
             </Link>
-            <Link href="/about" onClick={() => setMobileOpen(false)} className="block py-3 text-white/80 hover:text-white text-sm tracking-wide">
+            <Link href="/about" onClick={() => setMobileOpen(false)} className="block py-3 text-gray-700 hover:text-gray-900 text-sm tracking-wide">
               About
             </Link>
 
@@ -127,17 +127,17 @@ export default function Header() {
             <div>
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center justify-between w-full py-3 text-white/80 hover:text-white text-sm tracking-wide"
+                className="flex items-center justify-between w-full py-3 text-gray-700 hover:text-gray-900 text-sm tracking-wide"
               >
                 Services <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {servicesOpen && (
                 <div className="pl-4 space-y-1">
-                  <Link href="/services" onClick={() => setMobileOpen(false)} className="block py-2 text-white/60 hover:text-white text-sm">
+                  <Link href="/services" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-600 hover:text-gray-900 text-sm">
                     All Services
                   </Link>
                   {services.map((s) => (
-                    <Link key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="block py-2 text-white/60 hover:text-white text-sm">
+                    <Link key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="block py-2 text-gray-600 hover:text-gray-900 text-sm">
                       {s.name}
                     </Link>
                   ))}
@@ -149,14 +149,14 @@ export default function Header() {
             <div>
               <button
                 onClick={() => setLocationsOpen(!locationsOpen)}
-                className="flex items-center justify-between w-full py-3 text-white/80 hover:text-white text-sm tracking-wide"
+                className="flex items-center justify-between w-full py-3 text-gray-700 hover:text-gray-900 text-sm tracking-wide"
               >
                 Locations <ChevronDown className={`w-4 h-4 transition-transform ${locationsOpen ? 'rotate-180' : ''}`} />
               </button>
               {locationsOpen && (
                 <div className="pl-4 space-y-1">
                   {locations.map((l) => (
-                    <Link key={l.href} href={l.href} onClick={() => setMobileOpen(false)} className="block py-2 text-white/60 hover:text-white text-sm">
+                    <Link key={l.href} href={l.href} onClick={() => setMobileOpen(false)} className="block py-2 text-gray-600 hover:text-gray-900 text-sm">
                       {l.name}
                     </Link>
                   ))}
@@ -164,13 +164,13 @@ export default function Header() {
               )}
             </div>
 
-            <Link href="/testimonials" onClick={() => setMobileOpen(false)} className="block py-3 text-white/80 hover:text-white text-sm tracking-wide">
+            <Link href="/testimonials" onClick={() => setMobileOpen(false)} className="block py-3 text-gray-700 hover:text-gray-900 text-sm tracking-wide">
               Testimonials
             </Link>
-            <Link href="/faq" onClick={() => setMobileOpen(false)} className="block py-3 text-white/80 hover:text-white text-sm tracking-wide">
+            <Link href="/faq" onClick={() => setMobileOpen(false)} className="block py-3 text-gray-700 hover:text-gray-900 text-sm tracking-wide">
               FAQ
             </Link>
-            <Link href="/contact" onClick={() => setMobileOpen(false)} className="block py-3 text-white/80 hover:text-white text-sm tracking-wide">
+            <Link href="/contact" onClick={() => setMobileOpen(false)} className="block py-3 text-gray-700 hover:text-gray-900 text-sm tracking-wide">
               Contact
             </Link>
 
