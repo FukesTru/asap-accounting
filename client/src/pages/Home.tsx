@@ -22,12 +22,12 @@ function ConsultationForm() {
   }
   return (
     <form onSubmit={handleSubmit} className="space-y-3">
-      <input required type="text" placeholder="Full Name" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} className="w-full border border-border px-3 py-2.5 text-sm text-charcoal bg-white focus:outline-none focus:border-gold" />
-      <input required type="email" placeholder="Email Address" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} className="w-full border border-border px-3 py-2.5 text-sm text-charcoal bg-white focus:outline-none focus:border-gold" />
-      <input type="tel" placeholder="Phone (optional)" value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} className="w-full border border-border px-3 py-2.5 text-sm text-charcoal bg-white focus:outline-none focus:border-gold" />
-      <textarea placeholder="How can we help you?" rows={3} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} className="w-full border border-border px-3 py-2.5 text-sm text-charcoal bg-white focus:outline-none focus:border-gold resize-none" />
-      <button type="submit" className="w-full bg-gold text-white py-3 text-sm font-sans tracking-wider uppercase hover:bg-gold/90 transition-colors">Request Free Consultation</button>
-      <p className="text-center text-charcoal/40 text-xs">No obligation. Bilingual: English &amp; Spanish.</p>
+      <input required type="text" placeholder="Full Name" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} className="w-full border border-gray-300 px-3 py-2.5 text-sm text-gray-900 placeholder-gray-400 bg-white focus:outline-none focus:border-[oklch(0.62_0.12_75)]" />
+      <input required type="email" placeholder="Email Address" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} className="w-full border border-gray-300 px-3 py-2.5 text-sm text-gray-900 placeholder-gray-400 bg-white focus:outline-none focus:border-[oklch(0.62_0.12_75)]" />
+      <input type="tel" placeholder="Phone (optional)" value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} className="w-full border border-gray-300 px-3 py-2.5 text-sm text-gray-900 placeholder-gray-400 bg-white focus:outline-none focus:border-[oklch(0.62_0.12_75)]" />
+      <textarea placeholder="How can we help you?" rows={3} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} className="w-full border border-gray-300 px-3 py-2.5 text-sm text-gray-900 placeholder-gray-400 bg-white focus:outline-none focus:border-[oklch(0.62_0.12_75)] resize-none" />
+      <button type="submit" style={{backgroundColor: 'oklch(0.62 0.12 75)', color: '#ffffff'}} className="w-full py-3 text-sm font-sans font-semibold tracking-wider uppercase hover:opacity-90 transition-opacity">Request Free Consultation</button>
+      <p className="text-center text-gray-500 text-xs">No obligation. Bilingual: English &amp; Spanish.</p>
     </form>
   );
 }
@@ -100,9 +100,9 @@ export default function Home() {
               </div>
             </div>
             {/* Right: consultation form */}
-            <div className="bg-cream shadow-2xl">
-              <div className="bg-charcoal px-6 py-4">
-                <p className="text-gold font-sans text-xs tracking-[0.2em] uppercase mb-1">Free Consultation</p>
+            <div className="bg-white shadow-2xl border border-gray-200">
+              <div className="bg-[oklch(0.15_0.01_260)] px-6 py-4">
+                <p className="text-[oklch(0.62_0.12_75)] font-sans text-xs tracking-[0.2em] uppercase mb-1">Free Consultation</p>
                 <p className="text-white font-serif text-xl">Book a Meeting</p>
               </div>
               <div className="p-6">
