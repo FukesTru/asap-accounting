@@ -98,7 +98,7 @@ export default function Header() {
         </nav>
 
         {/* CTA Button */}
-        <Link href="/book" className="hidden lg:block btn-gold rounded-sm text-xs">
+        <Link href="/book" className="hidden lg:block btn-gold rounded-sm" style={{color: '#ffffff', fontSize: '0.75rem'}}>
           Book a Consultation
         </Link>
 
