@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { ArrowRight, Calculator, FileText, TrendingUp, DollarSign, Shield, PiggyBank, Heart } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-const inputClass = "w-full bg-white border-0 border-b-2 border-gray-200 px-0 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[oklch(0.62_0.12_75)] transition-colors duration-200";
+const inputClass = "w-full bg-[#fafafa] border border-gray-200 rounded px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[oklch(0.62_0.12_75)] focus:bg-white transition-all duration-200";
 
 function ConsultationForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -23,26 +23,41 @@ function ConsultationForm() {
     );
   }
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
-      <div>
-        <label className="block text-xs font-semibold text-gray-500 uppercase tracking-widest mb-1">Full Name</label>
-        <input required type="text" placeholder="Jane Smith" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} className={inputClass} />
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="grid grid-cols-1 gap-4">
+        <div>
+          <label className="block text-xs font-semibold text-gray-600 mb-1.5">Full Name <span className="text-red-400">*</span></label>
+          <input required type="text" placeholder="Jane Smith" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} className={inputClass} />
+        </div>
+        <div>
+          <label className="block text-xs font-semibold text-gray-600 mb-1.5">Email Address <span className="text-red-400">*</span></label>
+          <input required type="email" placeholder="jane@company.com" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} className={inputClass} />
+        </div>
+        <div>
+          <label className="block text-xs font-semibold text-gray-600 mb-1.5">Phone Number <span className="text-gray-400 font-normal">(optional)</span></label>
+          <input type="tel" placeholder="(305) 000-0000" value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} className={inputClass} />
+        </div>
+        <div>
+          <label className="block text-xs font-semibold text-gray-600 mb-1.5">How Can We Help You?</label>
+          <textarea placeholder="Tell us about your accounting or tax needs..." rows={3} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} className={inputClass + " resize-none"} />
+        </div>
       </div>
-      <div>
-        <label className="block text-xs font-semibold text-gray-500 uppercase tracking-widest mb-1">Email Address</label>
-        <input required type="email" placeholder="jane@company.com" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} className={inputClass} />
+      <div className="pt-1">
+        <button type="submit" className="w-full py-4 text-sm font-sans font-bold tracking-[0.15em] uppercase transition-all hover:opacity-90 active:scale-[0.98]" style={{backgroundColor: 'oklch(0.62 0.12 75)', color: '#ffffff'}}>Request Free Consultation</button>
       </div>
-      <div>
-        <label className="block text-xs font-semibold text-gray-500 uppercase tracking-widest mb-1">Phone <span className="normal-case font-normal">(optional)</span></label>
-        <input type="tel" placeholder="(305) 000-0000" value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} className={inputClass} />
-      </div>
-      <div>
-        <label className="block text-xs font-semibold text-gray-500 uppercase tracking-widest mb-1">How Can We Help?</label>
-        <textarea placeholder="Tell us about your needs..." rows={3} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} className={inputClass + " resize-none"} />
-      </div>
-      <div className="pt-2">
-        <button type="submit" className="w-full py-4 text-sm font-sans font-semibold tracking-[0.12em] uppercase transition-opacity hover:opacity-90" style={{backgroundColor: 'oklch(0.62 0.12 75)', color: '#ffffff'}}>Request Free Consultation</button>
-        <p className="text-center text-gray-400 text-xs mt-3">No obligation &nbsp;&bull;&nbsp; English &amp; Spanish</p>
+      <div className="flex items-center justify-center gap-4 pt-1">
+        <div className="flex items-center gap-1.5 text-gray-400 text-xs">
+          <svg className="w-3.5 h-3.5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+          No obligation
+        </div>
+        <div className="flex items-center gap-1.5 text-gray-400 text-xs">
+          <svg className="w-3.5 h-3.5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+          English &amp; Spanish
+        </div>
+        <div className="flex items-center gap-1.5 text-gray-400 text-xs">
+          <svg className="w-3.5 h-3.5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+          Responds in 24hrs
+        </div>
       </div>
     </form>
   );
@@ -116,12 +131,22 @@ export default function Home() {
               </div>
             </div>
             {/* Right: consultation form */}
-            <div className="bg-white shadow-2xl border border-gray-200">
-              <div className="bg-[oklch(0.15_0.01_260)] px-6 py-4">
-                <p className="text-[oklch(0.62_0.12_75)] font-sans text-xs tracking-[0.2em] uppercase mb-1">Free Consultation</p>
-                <p className="text-white font-serif text-xl">Book a Meeting</p>
+            <div className="relative bg-white shadow-2xl" style={{borderLeft: '4px solid oklch(0.62 0.12 75)'}}>
+              {/* Gold top accent bar */}
+              <div className="h-1 w-full" style={{background: 'linear-gradient(90deg, oklch(0.62 0.12 75), oklch(0.72 0.10 75))'}} />
+              <div className="px-7 pt-6 pb-2">
+                <div className="flex items-center gap-3 mb-1">
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{backgroundColor: 'oklch(0.62 0.12 75 / 0.12)'}}>
+                    <svg className="w-4 h-4" style={{color: 'oklch(0.62 0.12 75)'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                  </div>
+                  <div>
+                    <p className="font-serif text-gray-900 text-xl leading-tight">Book a Free Consultation</p>
+                    <p className="text-xs text-gray-400 mt-0.5">Speak with a CPA — no commitment required</p>
+                  </div>
+                </div>
+                <div className="h-px bg-gray-100 mt-4 mb-5" />
               </div>
-              <div className="p-6">
+              <div className="px-7 pb-7">
                 <ConsultationForm />
               </div>
             </div>
