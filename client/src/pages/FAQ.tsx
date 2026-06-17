@@ -5,7 +5,7 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   { q: "What services does ASAP Accounting offer?", a: "We provide bookkeeping, tax preparation, tax planning, payroll services, financial planning, retirement and wealth planning, and life insurance advisory services for individuals and businesses." },
-  { q: "Do you offer bilingual services?", a: "Yes. Susan Rodriguez and our team are fully bilingual in English and Spanish. We provide all services and communications in both languages." },
+  { q: "Do you serve clients outside of Doral?", a: "Yes. We serve clients throughout Miami-Dade County, Broward County, and all of South Florida. We also offer virtual consultations for clients anywhere in Florida." },
   { q: "Where is ASAP Accounting located?", a: "We are based in Doral, FL 33178, and serve clients throughout Miami-Dade County, Broward County, and all of South Florida. We also offer virtual consultations for clients who prefer remote meetings." },
   { q: "How do I schedule a consultation?", a: "You can book a free consultation through our online scheduling system, call us at (305) 877-7107, or email susan@asap-accounting.us. We offer both in-person and virtual appointments." },
   { q: "Is the initial consultation free?", a: "Yes. Your first consultation is completely free. We will discuss your needs, answer your questions, and recommend the best services for your situation." },

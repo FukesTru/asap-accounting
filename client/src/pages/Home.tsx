@@ -52,7 +52,7 @@ function ConsultationForm() {
         </div>
         <div className="flex items-center gap-1.5 text-gray-400 text-xs">
           <svg className="w-3.5 h-3.5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-          English &amp; Spanish
+          Free Consultation
         </div>
         <div className="flex items-center gap-1.5 text-gray-400 text-xs">
           <svg className="w-3.5 h-3.5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
@@ -122,17 +122,19 @@ export default function Home() {
                 Financial Clarity,<br />Done Right.
               </h1>
               <p className="text-white/60 text-lg leading-relaxed mb-10 max-w-lg font-light">
-                Expert accounting, tax, and financial advisory services for individuals and businesses across South Florida. Bilingual support in English and Spanish.
+                Expert accounting, tax, and financial advisory services for individuals and businesses across South Florida.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/services" className="btn-outline-gold rounded-sm text-center">
-                  Our Services
+                <Link href="/book" className="btn-gold rounded-sm text-center" style={{color:'#ffffff'}}>
+                  Book a Free Consultation
                 </Link>
+                <a href="tel:3058777107" className="btn-outline-gold rounded-sm text-center">
+                  (305) 877-7107
+                </a>
               </div>
             </div>
-            {/* Right: consultation form */}
+            {/* Right: GHL consultation form */}
             <div className="relative bg-white shadow-2xl" style={{borderLeft: '4px solid oklch(0.62 0.12 75)'}}>
-              {/* Gold top accent bar */}
               <div className="h-1 w-full" style={{background: 'linear-gradient(90deg, oklch(0.62 0.12 75), oklch(0.72 0.10 75))'}} />
               <div className="px-7 pt-6 pb-2">
                 <div className="flex items-center gap-3 mb-1">
@@ -144,20 +146,32 @@ export default function Home() {
                     <p className="text-xs text-gray-400 mt-0.5">Speak with a CPA — no commitment required</p>
                   </div>
                 </div>
-                <div className="h-px bg-gray-100 mt-4 mb-5" />
+                <div className="h-px bg-gray-100 mt-4" />
               </div>
-              <div className="px-7 pb-7">
-                <ConsultationForm />
+              <div className="px-4 pb-4">
+                <iframe
+                  src="https://api.leadconnectorhq.com/widget/form/L0f9VxAUVJUOvPm938qF"
+                  style={{width:'100%', height:'717px', border:'none', borderRadius:'4px'}}
+                  id="inline-L0f9VxAUVJUOvPm938qF"
+                  data-layout="{'id':'INLINE'}"
+                  data-trigger-type="alwaysShow"
+                  data-trigger-value=""
+                  data-activation-type="alwaysActivated"
+                  data-activation-value=""
+                  data-deactivation-type="neverDeactivate"
+                  data-deactivation-value=""
+                  data-form-name="ASAP Website Form"
+                  data-height="717"
+                  data-layout-iframe-id="inline-L0f9VxAUVJUOvPm938qF"
+                  data-form-id="L0f9VxAUVJUOvPm938qF"
+                  title="ASAP Website Form"
+                />
               </div>
             </div>
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-          <span className="text-white/30 text-xs uppercase tracking-widest">Scroll</span>
-          <div className="w-px h-8 bg-gradient-to-b from-white/30 to-transparent" />
-        </div>
+
       </section>
 
       {/* Trust Indicators */}
@@ -175,8 +189,8 @@ export default function Home() {
             </div>
             <div className="w-px h-10 bg-[oklch(0.88_0.01_80)] hidden md:block" />
             <div className="reveal opacity-0 translate-y-4 transition-all duration-600 delay-200">
-              <p className="text-3xl font-serif text-[oklch(0.62_0.12_75)]">Bilingual</p>
-              <p className="text-xs text-[oklch(0.40_0.01_260)] uppercase tracking-wider mt-1">English & Spanish</p>
+              <p className="text-3xl font-serif text-[oklch(0.62_0.12_75)]">South FL</p>
+              <p className="text-xs text-[oklch(0.40_0.01_260)] uppercase tracking-wider mt-1">Based in Doral</p>
             </div>
             <div className="w-px h-10 bg-[oklch(0.88_0.01_80)] hidden md:block" />
             <div className="reveal opacity-0 translate-y-4 transition-all duration-600 delay-300">
@@ -246,7 +260,7 @@ export default function Home() {
                 With over 15 years of experience in accounting and financial services, Susan founded ASAP Accounting to provide fast, reliable, and personalized financial support to individuals and businesses throughout South Florida.
               </p>
               <p className="text-white/60 leading-relaxed mb-8">
-                Fluent in both English and Spanish, Susan specializes in helping small businesses, entrepreneurs, and families navigate the complexities of tax compliance, financial planning, and business growth.
+                Susan specializes in helping small businesses, entrepreneurs, and families navigate the complexities of tax compliance, financial planning, and business growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/about" className="btn-outline-gold rounded-sm text-center">
@@ -294,9 +308,9 @@ export default function Home() {
               <div className="w-16 h-16 rounded-full border border-[oklch(0.62_0.12_75)] flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-serif text-[oklch(0.62_0.12_75)]">3</span>
               </div>
-              <h3 className="text-xl font-serif text-[oklch(0.15_0.01_260)] mb-3">Bilingual Support</h3>
+              <h3 className="text-xl font-serif text-[oklch(0.15_0.01_260)] mb-3">Transparent Pricing</h3>
               <p className="text-sm text-[oklch(0.50_0.01_260)] leading-relaxed">
-                Full service in English and Spanish. We make complex financial matters clear in your preferred language.
+                No surprise fees. We discuss pricing upfront so you always know exactly what to expect.
               </p>
             </div>
           </div>

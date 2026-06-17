@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <img
-              src="/manus-storage/logo-full-color_9a0c745a.png"
+              src="/manus-storage/asap-logo-v3_851d68ae.png"
               alt="ASAP Accounting"
               className="h-16 w-auto"
             />
@@ -65,7 +65,7 @@ export default function Footer() {
                 <Phone className="w-4 h-4 mt-0.5 text-[oklch(0.62_0.12_75)]" />
                 <div>
                   <a href="tel:+13058777107" className="text-sm hover:text-white transition-colors">(305) 877-7107</a>
-                  <p className="text-xs text-white/40 mt-0.5">Bilingual: English & Spanish</p>
+                  <p className="text-xs text-white/40 mt-0.5">Mon–Fri, 9am–5pm</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">

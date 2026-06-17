@@ -32,7 +32,7 @@ export default function About() {
                 Susan Rodriguez brings over 15 years of professional experience in accounting, tax preparation, financial planning, and business advisory. As a Certified Public Accountant, she combines technical expertise with a genuine commitment to helping clients achieve their financial goals.
               </p>
               <p className="text-[oklch(0.40_0.01_260)] leading-relaxed mb-8">
-                Fluent in both English and Spanish, Susan understands the unique needs of South Florida's diverse business community. Whether you are a startup founder, a growing small business, or an individual seeking tax guidance, ASAP Accounting provides the attentive, knowledgeable service you deserve.
+                Susan understands the unique needs of South Florida's diverse business community. Whether you are a startup founder, a growing small business, or an individual seeking tax guidance, ASAP Accounting provides the attentive, knowledgeable service you deserve.
               </p>
               <Link href="/book" className="btn-gold rounded-sm inline-block">
                 Schedule a Consultation

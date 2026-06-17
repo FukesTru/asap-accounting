@@ -14,7 +14,7 @@ export default function OurTeam() {
                 <h2 className="text-3xl font-serif text-[oklch(0.15_0.01_260)] mb-2">Susan Rodriguez</h2>
                 <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-wider mb-4 font-medium">Founder & CPA</p>
                 <p className="text-[oklch(0.40_0.01_260)] leading-relaxed mb-4">Susan is a Certified Public Accountant with over 15 years of experience serving individuals and businesses throughout South Florida. She specializes in tax planning, business advisory, and financial strategy.</p>
-                <p className="text-[oklch(0.40_0.01_260)] leading-relaxed mb-4">Fluent in English and Spanish, Susan is passionate about making financial services accessible and understandable for all of her clients.</p>
+                <p className="text-[oklch(0.40_0.01_260)] leading-relaxed mb-4">Susan is passionate about making financial services accessible and understandable for all of her clients.</p>
                 <p className="text-[oklch(0.40_0.01_260)] leading-relaxed">Her approach combines deep technical knowledge with genuine care for each client's unique situation and goals.</p>
               </div>
             </div>

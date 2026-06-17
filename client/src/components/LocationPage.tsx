@@ -47,7 +47,7 @@ export default function LocationPage({ city, description, intro, details }: Loca
               ASAP Accounting is conveniently located in Doral, FL, providing easy access for clients throughout {city} and the greater South Florida area. We offer both in-person and virtual consultations to fit your schedule.
             </p>
             <p className="text-white/60 leading-relaxed mb-10">
-              Bilingual services available in English and Spanish. Our AI assistant is also available 24/7 for quick questions about our services.
+              Our AI assistant is available 24/7 for quick questions about our services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/book" className="btn-gold rounded-sm text-center">

@@ -19,7 +19,7 @@ export default function Contact() {
                   <div>
                     <p className="text-[oklch(0.15_0.01_260)] font-medium mb-1">Phone</p>
                     <a href="tel:+13058777107" className="text-[oklch(0.40_0.01_260)] hover:text-[oklch(0.62_0.12_75)] transition-colors">(305) 877-7107</a>
-                    <p className="text-sm text-[oklch(0.50_0.01_260)] mt-1">Bilingual: English & Spanish</p>
+                    <p className="text-sm text-[oklch(0.50_0.01_260)] mt-1">Available Mon–Fri, 9am–5pm</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
