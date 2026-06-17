@@ -104,7 +104,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center section-dark overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663303940668/cNUSTNFzMCFwRDHvZHurhf/hero-accounting-N6mJQeSrVFKwzhZDgvtyn4.webp"
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663303940668/cNUSTNFzMCFwRDHvZHurhf/hero-bg-v2-PGQetchnrAeTjLwfzzWnPY.webp"
             alt="Professional accounting office"
             className="w-full h-full object-cover opacity-30"
           />
@@ -119,7 +119,7 @@ export default function Home() {
                 Doral, FL — Certified Public Accountant
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-6">
-                Financial Clarity,<br />Done Right.
+                Accounting That Works<br />as Hard as You Do.
               </h1>
               <p className="text-white/60 text-lg leading-relaxed mb-10 max-w-lg font-light">
                 Expert accounting, tax, and financial advisory services for individuals and businesses across South Florida.
@@ -134,24 +134,17 @@ export default function Home() {
               </div>
             </div>
             {/* Right: GHL consultation form */}
-            <div className="relative bg-white shadow-2xl" style={{borderLeft: '4px solid oklch(0.62 0.12 75)'}}>
+            <div className="relative" style={{background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.15)', boxShadow: '0 25px 60px rgba(0,0,0,0.4)'}}>
               <div className="h-1 w-full" style={{background: 'linear-gradient(90deg, oklch(0.62 0.12 75), oklch(0.72 0.10 75))'}} />
-              <div className="px-7 pt-6 pb-2">
-                <div className="flex items-center gap-3 mb-1">
-                  <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{backgroundColor: 'oklch(0.62 0.12 75 / 0.12)'}}>
-                    <svg className="w-4 h-4" style={{color: 'oklch(0.62 0.12 75)'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                  </div>
-                  <div>
-                    <p className="font-serif text-gray-900 text-xl leading-tight">Book a Free Consultation</p>
-                    <p className="text-xs text-gray-400 mt-0.5">Speak with a CPA — no commitment required</p>
-                  </div>
-                </div>
-                <div className="h-px bg-gray-100 mt-4" />
+              <div className="px-7 pt-6 pb-2 text-center">
+                <p className="font-serif text-white text-2xl leading-tight mb-1">Reach Out To Our Team</p>
+                <p className="text-xs text-white/60 mt-0.5">Speak with a CPA — no commitment required</p>
+                <div className="h-px mt-4" style={{background: 'rgba(255,255,255,0.15)'}} />
               </div>
               <div className="px-4 pb-4">
                 <iframe
                   src="https://api.leadconnectorhq.com/widget/form/L0f9VxAUVJUOvPm938qF"
-                  style={{width:'100%', height:'717px', border:'none', borderRadius:'4px'}}
+                  style={{width:'100%', height:'639px', border:'none', borderRadius:'4px'}}
                   id="inline-L0f9VxAUVJUOvPm938qF"
                   data-layout="{'id':'INLINE'}"
                   data-trigger-type="alwaysShow"
@@ -161,7 +154,7 @@ export default function Home() {
                   data-deactivation-type="neverDeactivate"
                   data-deactivation-value=""
                   data-form-name="ASAP Website Form"
-                  data-height="717"
+                  data-height="639"
                   data-layout-iframe-id="inline-L0f9VxAUVJUOvPm938qF"
                   data-form-id="L0f9VxAUVJUOvPm938qF"
                   title="ASAP Website Form"
@@ -327,7 +320,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto reveal opacity-0 translate-y-4 transition-all duration-600 delay-100">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto reveal opacity-0 translate-y-4 transition-all duration-600 delay-100" style={{margin: '0 auto'}}>
             <div className="border border-white/10 p-8 rounded-sm">
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
@@ -402,8 +395,8 @@ export default function Home() {
       <style>{`
         .reveal {
           opacity: 0;
-          transform: translateY(20px);
-          transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1), transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+          transform: translateY(28px);
+          transition: opacity 0.9s cubic-bezier(0.23, 1, 0.32, 1), transform 0.9s cubic-bezier(0.23, 1, 0.32, 1);
         }
         .reveal.animate-in {
           opacity: 1;

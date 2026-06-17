@@ -56,27 +56,32 @@ export default function Contact() {
                 <Link href="/book" className="btn-gold rounded-sm inline-block">Book a Free Consultation</Link>
               </div>
             </div>
-            <div className="bg-white border border-[oklch(0.88_0.01_80)] p-8 rounded-sm">
-              <h3 className="text-xl font-serif text-[oklch(0.15_0.01_260)] mb-6">Send Us a Message</h3>
-              <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); alert("Thank you for your message. We will be in touch shortly."); }}>
-                <div>
-                  <label className="block text-sm text-[oklch(0.40_0.01_260)] mb-1">Full Name</label>
-                  <input type="text" required className="w-full border border-[oklch(0.88_0.01_80)] px-4 py-3 text-sm bg-[oklch(0.97_0.005_80)] focus:border-[oklch(0.62_0.12_75)] focus:outline-none transition-colors" placeholder="Your full name" />
-                </div>
-                <div>
-                  <label className="block text-sm text-[oklch(0.40_0.01_260)] mb-1">Email</label>
-                  <input type="email" required className="w-full border border-[oklch(0.88_0.01_80)] px-4 py-3 text-sm bg-[oklch(0.97_0.005_80)] focus:border-[oklch(0.62_0.12_75)] focus:outline-none transition-colors" placeholder="your@email.com" />
-                </div>
-                <div>
-                  <label className="block text-sm text-[oklch(0.40_0.01_260)] mb-1">Phone</label>
-                  <input type="tel" className="w-full border border-[oklch(0.88_0.01_80)] px-4 py-3 text-sm bg-[oklch(0.97_0.005_80)] focus:border-[oklch(0.62_0.12_75)] focus:outline-none transition-colors" placeholder="(305) 000-0000" />
-                </div>
-                <div>
-                  <label className="block text-sm text-[oklch(0.40_0.01_260)] mb-1">Message</label>
-                  <textarea required rows={4} className="w-full border border-[oklch(0.88_0.01_80)] px-4 py-3 text-sm bg-[oklch(0.97_0.005_80)] focus:border-[oklch(0.62_0.12_75)] focus:outline-none transition-colors resize-none" placeholder="How can we help you?" />
-                </div>
-                <button type="submit" className="btn-gold rounded-sm w-full">Send Message</button>
-              </form>
+            <div className="bg-white border border-[oklch(0.88_0.01_80)] rounded-sm overflow-hidden">
+              <div className="h-1 w-full" style={{background: 'linear-gradient(90deg, oklch(0.62 0.12 75), oklch(0.72 0.10 75))'}} />
+              <div className="px-8 pt-6 pb-2">
+                <h3 className="text-xl font-serif text-[oklch(0.15_0.01_260)] mb-1">Send Us a Message</h3>
+                <p className="text-sm text-[oklch(0.50_0.01_260)]">We respond within one business day.</p>
+                <div className="h-px bg-[oklch(0.92_0.004_286)] mt-4" />
+              </div>
+              <div className="px-4 pb-4">
+                <iframe
+                  src="https://api.leadconnectorhq.com/widget/form/L0f9VxAUVJUOvPm938qF"
+                  style={{width:'100%', height:'639px', border:'none', borderRadius:'4px'}}
+                  id="inline-contact-L0f9VxAUVJUOvPm938qF"
+                  data-layout="{'id':'INLINE'}"
+                  data-trigger-type="alwaysShow"
+                  data-trigger-value=""
+                  data-activation-type="alwaysActivated"
+                  data-activation-value=""
+                  data-deactivation-type="neverDeactivate"
+                  data-deactivation-value=""
+                  data-form-name="ASAP Website Form"
+                  data-height="639"
+                  data-layout-iframe-id="inline-contact-L0f9VxAUVJUOvPm938qF"
+                  data-form-id="L0f9VxAUVJUOvPm938qF"
+                  title="ASAP Website Form"
+                />
+              </div>
             </div>
           </div>
         </div>
