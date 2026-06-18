@@ -1,24 +1,6 @@
 import { Link } from "wouter";
 import { ArrowRight, Calculator, FileText, TrendingUp, DollarSign, Shield, PiggyBank, Heart } from "lucide-react";
-import { useEffect, useRef } from "react";
-
-function useScrollReveal() {
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("home-animate-in");
-        });
-      },
-      { threshold: 0.08 }
-    );
-    const el = ref.current;
-    if (el) el.querySelectorAll(".home-reveal").forEach((child) => observer.observe(child));
-    return () => observer.disconnect();
-  }, []);
-  return ref;
-}
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const services = [
   { icon: Calculator, name: "Bookkeeping", desc: "Accurate, organized financial records that keep your business running smoothly.", href: "/services/bookkeeping" },
@@ -41,18 +23,6 @@ export default function Home() {
 
   return (
     <div ref={containerRef}>
-      <style>{`
-        .home-reveal {
-          opacity: 0;
-          transform: translateY(28px);
-          transition: opacity 0.9s cubic-bezier(0.23, 1, 0.32, 1), transform 0.9s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-        .home-reveal.home-animate-in {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      `}</style>
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center section-dark overflow-hidden">
         <div className="absolute inset-0">
@@ -122,22 +92,22 @@ export default function Home() {
       <section className="section-cream py-12 border-b border-[oklch(0.88_0.01_80)]">
         <div className="container">
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 text-center">
-            <div className="home-reveal">
+            <div className="reveal">
               <p className="text-3xl font-serif text-[oklch(0.62_0.12_75)]">5.0</p>
               <p className="text-xs text-[oklch(0.40_0.01_260)] uppercase tracking-wider mt-1">Google Rating</p>
             </div>
             <div className="w-px h-10 bg-[oklch(0.88_0.01_80)] hidden md:block" />
-            <div className="home-reveal" style={{transitionDelay:'80ms'}}>
+            <div className="reveal" style={{transitionDelay:'80ms'}}>
               <p className="text-3xl font-serif text-[oklch(0.62_0.12_75)]">15+</p>
               <p className="text-xs text-[oklch(0.40_0.01_260)] uppercase tracking-wider mt-1">Years Experience</p>
             </div>
             <div className="w-px h-10 bg-[oklch(0.88_0.01_80)] hidden md:block" />
-            <div className="home-reveal" style={{transitionDelay:'160ms'}}>
+            <div className="reveal" style={{transitionDelay:'160ms'}}>
               <p className="text-3xl font-serif text-[oklch(0.62_0.12_75)]">South FL</p>
               <p className="text-xs text-[oklch(0.40_0.01_260)] uppercase tracking-wider mt-1">Based in Doral</p>
             </div>
             <div className="w-px h-10 bg-[oklch(0.88_0.01_80)] hidden md:block" />
-            <div className="home-reveal" style={{transitionDelay:'240ms'}}>
+            <div className="reveal" style={{transitionDelay:'240ms'}}>
               <p className="text-3xl font-serif text-[oklch(0.62_0.12_75)]">CPA</p>
               <p className="text-xs text-[oklch(0.40_0.01_260)] uppercase tracking-wider mt-1">Certified</p>
             </div>
@@ -149,11 +119,11 @@ export default function Home() {
       <section className="section-cream py-20 md:py-28">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.15em] mb-3 font-sans font-medium home-reveal">What We Do</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl text-[oklch(0.15_0.01_260)] leading-tight font-serif home-reveal" style={{transitionDelay:'80ms'}}>
+            <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.15em] mb-3 font-sans font-medium reveal">What We Do</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl text-[oklch(0.15_0.01_260)] leading-tight font-serif reveal" style={{transitionDelay:'80ms'}}>
               Comprehensive Financial Services
             </h2>
-            <p className="text-[oklch(0.40_0.01_260)] mt-4 text-lg leading-relaxed home-reveal" style={{transitionDelay:'160ms'}}>
+            <p className="text-[oklch(0.40_0.01_260)] mt-4 text-lg leading-relaxed reveal" style={{transitionDelay:'160ms'}}>
               From daily bookkeeping to long-term financial strategy, we provide the expertise your business needs to thrive.
             </p>
           </div>
@@ -163,7 +133,7 @@ export default function Home() {
               <Link
                 key={service.name}
                 href={service.href}
-                className="home-reveal group p-8 border border-[oklch(0.88_0.01_80)] hover:border-[oklch(0.62_0.12_75)] bg-white hover:bg-white transition-all duration-300 block"
+                className="reveal group p-8 border border-[oklch(0.88_0.01_80)] hover:border-[oklch(0.62_0.12_75)] bg-white hover:bg-white transition-all duration-300 block"
                 style={{ transitionDelay: `${i * 60}ms` }}
               >
                 <service.icon className="w-6 h-6 text-[oklch(0.62_0.12_75)] mb-4" />
@@ -176,7 +146,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-12 home-reveal">
+          <div className="text-center mt-12 reveal">
             <Link href="/book" className="btn-gold rounded-sm inline-block">
               Schedule a Free Consultation
             </Link>
@@ -188,14 +158,14 @@ export default function Home() {
       <section className="section-dark py-20 md:py-28">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="home-reveal">
+            <div className="reveal">
               <img
                 src="https://d2xsxph8kpxj0f.cloudfront.net/310519663303940668/cNUSTNFzMCFwRDHvZHurhf/about-susan-4oDS4cpqRAR3D4y9yBuG73.webp"
                 alt="Susan Rodriguez, CPA - Founder of ASAP Accounting"
                 className="w-full max-w-md mx-auto lg:mx-0 object-cover aspect-[3/4] rounded-sm"
               />
             </div>
-            <div className="home-reveal" style={{transitionDelay:'120ms'}}>
+            <div className="reveal" style={{transitionDelay:'120ms'}}>
               <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.15em] mb-3 font-sans font-medium">About Us</p>
               <h2 className="text-3xl md:text-4xl text-white leading-tight mb-6 font-serif">
                 Meet Susan Rodriguez, CPA
@@ -223,8 +193,8 @@ export default function Home() {
       <section className="section-cream py-20 md:py-28">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.15em] mb-3 font-sans font-medium home-reveal">Why ASAP Accounting</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl text-[oklch(0.15_0.01_260)] leading-tight font-serif home-reveal" style={{transitionDelay:'80ms'}}>
+            <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.15em] mb-3 font-sans font-medium reveal">Why ASAP Accounting</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl text-[oklch(0.15_0.01_260)] leading-tight font-serif reveal" style={{transitionDelay:'80ms'}}>
               Built on Trust, Driven by Results
             </h2>
           </div>
@@ -235,7 +205,7 @@ export default function Home() {
               { num: "2", title: "Fast Turnaround", desc: "ASAP is not just our name — it is our promise. We deliver accurate work on time, every time." },
               { num: "3", title: "Transparent Pricing", desc: "No surprise fees. We discuss pricing upfront so you always know exactly what to expect." },
             ].map((item, i) => (
-              <div key={item.num} className="text-center home-reveal" style={{transitionDelay:`${i * 80}ms`}}>
+              <div key={item.num} className="text-center reveal" style={{transitionDelay:`${i * 80}ms`}}>
                 <div className="w-16 h-16 rounded-full border border-[oklch(0.62_0.12_75)] flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl font-serif text-[oklch(0.62_0.12_75)]">{item.num}</span>
                 </div>
@@ -251,14 +221,14 @@ export default function Home() {
       <section className="section-dark py-20 md:py-28">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.15em] mb-3 font-sans font-medium home-reveal">Client Reviews</p>
-            <h2 className="text-3xl md:text-4xl text-white leading-tight font-serif home-reveal" style={{transitionDelay:'80ms'}}>
+            <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.15em] mb-3 font-sans font-medium reveal">Client Reviews</p>
+            <h2 className="text-3xl md:text-4xl text-white leading-tight font-serif reveal" style={{transitionDelay:'80ms'}}>
               What Our Clients Say
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="home-reveal border border-white/10 p-8 hover:border-[oklch(0.62_0.12_75)] transition-all duration-300">
+            <div className="reveal border border-white/10 p-8 hover:border-[oklch(0.62_0.12_75)] transition-all duration-300">
               <div className="flex gap-1 mb-5">
                 {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
               </div>
@@ -270,7 +240,7 @@ export default function Home() {
               <p className="text-white/40 text-xs mt-1">Verified Google Review</p>
             </div>
 
-            <div className="home-reveal border border-white/10 p-8 hover:border-[oklch(0.62_0.12_75)] transition-all duration-300" style={{transitionDelay:'80ms'}}>
+            <div className="reveal border border-white/10 p-8 hover:border-[oklch(0.62_0.12_75)] transition-all duration-300" style={{transitionDelay:'80ms'}}>
               <div className="flex gap-1 mb-5">
                 {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
               </div>
@@ -288,7 +258,7 @@ export default function Home() {
       {/* AI Assistant Mention */}
       <section className="section-cream py-16 border-b border-[oklch(0.88_0.01_80)]">
         <div className="container">
-          <div className="text-center max-w-2xl mx-auto home-reveal">
+          <div className="text-center max-w-2xl mx-auto reveal">
             <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.15em] mb-3 font-sans font-medium">Available 24/7</p>
             <h2 className="text-2xl md:text-3xl text-[oklch(0.15_0.01_260)] leading-tight mb-4 font-serif">
               Have a Quick Question?
@@ -303,7 +273,7 @@ export default function Home() {
       {/* Final CTA */}
       <section className="section-dark py-20 md:py-28">
         <div className="container">
-          <div className="max-w-2xl mx-auto text-center home-reveal">
+          <div className="max-w-2xl mx-auto text-center reveal">
             <div className="w-px h-12 bg-[oklch(0.62_0.12_75)] mx-auto mb-8" />
             <h2 className="text-3xl md:text-4xl lg:text-5xl text-white leading-tight mb-6 font-serif">
               Ready to Take Control of Your Finances?

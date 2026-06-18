@@ -1,24 +1,6 @@
 import { Link } from "wouter";
-import { useEffect, useRef } from "react";
 import { Phone } from "lucide-react";
-
-function useScrollReveal() {
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("test-animate-in");
-        });
-      },
-      { threshold: 0.08 }
-    );
-    const el = ref.current;
-    if (el) el.querySelectorAll(".test-reveal").forEach((child) => observer.observe(child));
-    return () => observer.disconnect();
-  }, []);
-  return ref;
-}
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const StarIcon = () => (
   <svg className="w-5 h-5 text-[oklch(0.62_0.12_75)]" fill="currentColor" viewBox="0 0 20 20">
@@ -44,31 +26,19 @@ export default function Testimonials() {
 
   return (
     <div ref={containerRef}>
-      <style>{`
-        .test-reveal {
-          opacity: 0;
-          transform: translateY(28px);
-          transition: opacity 0.9s cubic-bezier(0.23, 1, 0.32, 1), transform 0.9s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-        .test-reveal.test-animate-in {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      `}</style>
-
       {/* Hero */}
       <section className="section-dark py-28 md:py-36 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 60px, oklch(0.62 0.12 75) 60px, oklch(0.62 0.12 75) 61px)', backgroundSize: '100% 61px'}} />
         <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.2em] font-sans font-medium mb-6 test-reveal">Client Reviews</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-6 font-serif test-reveal" style={{transitionDelay:'80ms'}}>
+            <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.2em] font-sans font-medium mb-6 reveal">Client Reviews</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-6 font-serif reveal" style={{transitionDelay:'80ms'}}>
               What Our Clients Say
             </h1>
-            <p className="text-white/60 text-lg leading-relaxed mb-10 max-w-2xl mx-auto test-reveal" style={{transitionDelay:'160ms'}}>
+            <p className="text-white/60 text-lg leading-relaxed mb-10 max-w-2xl mx-auto reveal" style={{transitionDelay:'160ms'}}>
               Real reviews from real clients. We are proud of the relationships we build and the results we deliver.
             </p>
-            <div className="flex items-center justify-center gap-3 test-reveal" style={{transitionDelay:'240ms'}}>
+            <div className="flex items-center justify-center gap-3 reveal" style={{transitionDelay:'240ms'}}>
               <div className="flex gap-1">
                 {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
               </div>
@@ -85,7 +55,7 @@ export default function Testimonials() {
             {reviews.map((r, i) => (
               <div
                 key={r.name}
-                className="test-reveal border border-[oklch(0.88_0.01_80)] bg-white p-10"
+                className="reveal border border-[oklch(0.88_0.01_80)] bg-white p-10"
                 style={{transitionDelay:`${i * 120}ms`}}
               >
                 <div className="flex gap-1 mb-6">
@@ -104,7 +74,7 @@ export default function Testimonials() {
       {/* CTA */}
       <section className="section-dark py-20 md:py-28">
         <div className="container">
-          <div className="max-w-2xl mx-auto text-center test-reveal">
+          <div className="max-w-2xl mx-auto text-center reveal">
             <div className="w-px h-12 bg-[oklch(0.62_0.12_75)] mx-auto mb-8" />
             <h2 className="text-3xl md:text-4xl text-white leading-tight mb-6 font-serif">
               Ready to Become Our Next Success Story?
