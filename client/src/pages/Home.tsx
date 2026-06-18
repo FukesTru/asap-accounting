@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { useEffect, useRef } from "react";
 import { ArrowRight, Calculator, FileText, TrendingUp, DollarSign, Shield, PiggyBank, Heart } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
@@ -20,16 +21,57 @@ const StarIcon = () => (
 
 export default function Home() {
   const containerRef = useScrollReveal();
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  // Trigger hero entrance animations after mount
+  useEffect(() => {
+    const el = heroRef.current;
+    if (!el) return;
+    // Small delay to ensure paint is complete before animating
+    const t = setTimeout(() => {
+      el.querySelectorAll(".hero-enter").forEach((child) => {
+        (child as HTMLElement).style.animationPlayState = "running";
+      });
+    }, 60);
+    return () => clearTimeout(t);
+  }, []);
 
   return (
     <div ref={containerRef}>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center section-dark overflow-hidden">
+      <section ref={heroRef} className="relative min-h-screen flex items-center section-dark overflow-hidden">
+        <style>{`
+          @keyframes heroFadeUp {
+            from { opacity: 0; transform: translateY(32px); }
+            to   { opacity: 1; transform: translateY(0); }
+          }
+          @keyframes heroFadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+          }
+          @keyframes heroBgReveal {
+            from { opacity: 0; transform: scale(1.04); }
+            to   { opacity: 0.30; transform: scale(1); }
+          }
+          @keyframes heroLineGrow {
+            from { transform: scaleX(0); opacity: 0; }
+            to   { transform: scaleX(1); opacity: 1; }
+          }
+          .hero-enter {
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+            animation-play-state: paused;
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .hero-enter { animation: none !important; opacity: 1 !important; transform: none !important; }
+          }
+        `}</style>
         <div className="absolute inset-0">
           <img
             src="https://d2xsxph8kpxj0f.cloudfront.net/310519663303940668/cNUSTNFzMCFwRDHvZHurhf/hero-bg-v2-PGQetchnrAeTjLwfzzWnPY.webp"
             alt="Professional accounting office"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover hero-enter"
+            style={{animationName:'heroBgReveal', animationDuration:'1.8s', animationDelay:'0ms'}}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.12_0.01_260)] via-[oklch(0.12_0.01_260)/90%] to-transparent" />
         </div>
@@ -38,16 +80,33 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: tagline */}
             <div>
-              <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.2em] mb-6 font-sans font-medium">
+              {/* Gold accent line */}
+              <div
+                className="hero-enter w-10 h-px mb-6 origin-left"
+                style={{background:'oklch(0.62 0.12 75)', animationName:'heroLineGrow', animationDuration:'0.7s', animationDelay:'200ms'}}
+              />
+              <p
+                className="hero-enter text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.2em] mb-6 font-sans font-medium"
+                style={{animationName:'heroFadeUp', animationDuration:'0.9s', animationDelay:'320ms'}}
+              >
                 Doral, FL — Certified Public Accountant
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-6">
+              <h1
+                className="hero-enter text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-6"
+                style={{animationName:'heroFadeUp', animationDuration:'1.0s', animationDelay:'460ms'}}
+              >
                 Accounting That Works<br />as Hard as You Do.
               </h1>
-              <p className="text-white/60 text-lg leading-relaxed mb-10 max-w-lg font-light">
+              <p
+                className="hero-enter text-white/60 text-lg leading-relaxed mb-10 max-w-lg font-light"
+                style={{animationName:'heroFadeUp', animationDuration:'1.0s', animationDelay:'600ms'}}
+              >
                 Expert accounting, tax, and financial advisory services for individuals and businesses across South Florida.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div
+                className="hero-enter flex flex-col sm:flex-row gap-4"
+                style={{animationName:'heroFadeUp', animationDuration:'1.0s', animationDelay:'740ms'}}
+              >
                 <Link href="/book" className="btn-gold rounded-sm text-center" style={{color:'#ffffff'}}>
                   Book a Free Consultation
                 </Link>
@@ -57,7 +116,10 @@ export default function Home() {
               </div>
             </div>
             {/* Right: GHL consultation form */}
-            <div className="relative" style={{background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.15)', boxShadow: '0 25px 60px rgba(0,0,0,0.4)'}}>
+            <div
+              className="hero-enter relative"
+              style={{background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.15)', boxShadow: '0 25px 60px rgba(0,0,0,0.4)', animationName:'heroFadeUp', animationDuration:'1.1s', animationDelay:'560ms'}}
+            >
               <div className="h-1 w-full" style={{background: 'linear-gradient(90deg, oklch(0.62 0.12 75), oklch(0.72 0.10 75))'}} />
               <div className="px-7 pt-6 pb-2 text-center">
                 <p className="font-serif text-white text-2xl leading-tight mb-1">Reach Out To Our Team</p>
