@@ -91,6 +91,7 @@
   }
   body {
     @apply bg-background text-foreground font-sans;
+    background-color: oklch(0.12 0.01 260); /* dark initial paint — prevents flash before React hydrates */
     font-feature-settings: "cv11", "ss01";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
