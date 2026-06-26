@@ -1,5 +1,4 @@
 import { Link } from "wouter";
-import { useEffect, useRef } from "react";
 import { ArrowRight, Calculator, FileText, TrendingUp, DollarSign, Shield, PiggyBank, Heart } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
@@ -21,25 +20,13 @@ const StarIcon = () => (
 
 export default function Home() {
   const containerRef = useScrollReveal();
-  const heroRef = useRef<HTMLDivElement>(null);
 
-  // Trigger hero entrance animations after mount
-  useEffect(() => {
-    const el = heroRef.current;
-    if (!el) return;
-    // Small delay to ensure paint is complete before animating
-    const t = setTimeout(() => {
-      el.querySelectorAll(".hero-enter").forEach((child) => {
-        (child as HTMLElement).style.animationPlayState = "running";
-      });
-    }, 60);
-    return () => clearTimeout(t);
-  }, []);
+  // Hero animations run automatically via CSS — no JS needed
 
   return (
     <div ref={containerRef}>
       {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center section-dark overflow-hidden">
+      <section className="relative min-h-screen flex items-center section-dark overflow-hidden">
         <style>{`
           @keyframes heroFadeUp {
             from { opacity: 0; transform: translateY(32px); }
@@ -60,7 +47,7 @@ export default function Home() {
           .hero-enter {
             animation-fill-mode: both;
             animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-            animation-play-state: paused;
+            animation-play-state: running;
           }
           @media (prefers-reduced-motion: reduce) {
             .hero-enter { animation: none !important; opacity: 1 !important; transform: none !important; }
