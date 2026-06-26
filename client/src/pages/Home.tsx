@@ -222,7 +222,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="reveal">
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663303940668/cNUSTNFzMCFwRDHvZHurhf/about-susan-4oDS4cpqRAR3D4y9yBuG73.webp"
+                src="/manus-storage/susan-headshot_3c40effc.png"
                 alt="Susan Rodriguez, CPA - Founder of ASAP Accounting"
                 className="w-full max-w-md mx-auto lg:mx-0 object-cover aspect-[3/4] rounded-sm"
               />

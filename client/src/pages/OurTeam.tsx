@@ -9,7 +9,7 @@ export default function OurTeam() {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663303940668/cNUSTNFzMCFwRDHvZHurhf/about-susan-4oDS4cpqRAR3D4y9yBuG73.webp" alt="Susan Rodriguez, CPA" className="w-full max-w-sm mx-auto object-cover aspect-[3/4] rounded-sm" />
+              <img src="/manus-storage/susan-headshot_3c40effc.png" alt="Susan Rodriguez, CPA" className="w-full max-w-sm mx-auto object-cover aspect-[3/4] rounded-sm" />
               <div>
                 <h2 className="text-3xl font-serif text-[oklch(0.15_0.01_260)] mb-2">Susan Rodriguez</h2>
                 <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-wider mb-4 font-medium">Founder & CPA</p>
