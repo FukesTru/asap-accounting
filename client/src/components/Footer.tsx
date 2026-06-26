@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663303940668/cNUSTNFzMCFwRDHvZHurhf/asap-logo-white-diWv3pznJ745ppC8so3UZr.webp"
+              src="/manus-storage/asap-logo_e3793279.png"
               alt="ASAP Accounting"
               className="h-16 w-auto"
             />
