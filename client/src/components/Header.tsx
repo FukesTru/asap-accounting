@@ -38,7 +38,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
           <img
-            src="/manus-storage/asap-logo_e3793279.png"
+            src="/manus-storage/asap-logo-transparent_63ec8506.png"
             alt="ASAP Accounting"
             className="h-12 w-auto"
           />
