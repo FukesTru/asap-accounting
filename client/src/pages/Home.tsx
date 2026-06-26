@@ -68,7 +68,7 @@ export default function Home() {
         `}</style>
         <div className="absolute inset-0">
           <img
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663303940668/cNUSTNFzMCFwRDHvZHurhf/hero-bg-v2-PGQetchnrAeTjLwfzzWnPY.webp"
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663303940668/cNUSTNFzMCFwRDHvZHurhf/hero-bg-alt-v1-bMgf4WdepkWJNfFxjYSSm3.webp"
             alt="Professional accounting office"
             className="w-full h-full object-cover hero-enter"
             style={{animationName:'heroBgReveal', animationDuration:'1.8s', animationDelay:'0ms'}}
