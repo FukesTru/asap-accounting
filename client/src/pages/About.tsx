@@ -9,9 +9,9 @@ const values = [
 ];
 
 const credentials = [
-  "Certified Public Accountant (CPA), State of Florida",
   "Over 15 years of professional accounting experience",
   "Specialization in small business and individual tax",
+  "English- and Spanish-speaking services available",
   "Serving Miami-Dade, Broward, and all of South Florida",
 ];
 
@@ -50,12 +50,12 @@ export default function About() {
               <div className="reveal">
                 <img
                   src="/manus-storage/susan-headshot_3c40effc.png"
-                  alt="Susan Rodriguez, CPA"
+                  alt="Susan Rodriguez - Founder of ASAP Accounting"
                   className="w-full max-w-md mx-auto object-cover aspect-[3/4]"
                 />
               </div>
               <div>
-                <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.15em] mb-3 font-sans font-medium reveal">Founded by Susan Rodriguez, CPA</p>
+                <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.15em] mb-3 font-sans font-medium reveal">Founded by Susan Rodriguez</p>
                 <h2 className="text-3xl md:text-4xl text-[oklch(0.15_0.01_260)] leading-tight mb-6 font-serif reveal" style={{transitionDelay:'80ms'}}>
                   Dedicated to Your Financial Well-Being
                 </h2>
@@ -63,10 +63,10 @@ export default function About() {
                   ASAP Accounting LLC was founded with a clear mission: to provide fast, reliable, and personalized accounting services to individuals and businesses throughout South Florida. Based in Doral, FL, we serve clients across Miami-Dade County, Broward County, and beyond.
                 </p>
                 <p className="text-[oklch(0.40_0.01_260)] leading-relaxed mb-4 reveal" style={{transitionDelay:'160ms'}}>
-                  Susan Rodriguez brings over 15 years of professional experience in accounting, tax preparation, financial planning, and business advisory. As a Certified Public Accountant, she combines technical expertise with a genuine commitment to helping clients achieve their financial goals.
+                  Susan Rodriguez brings over 15 years of professional experience in accounting, tax preparation, financial planning, and business advisory. She combines deep technical expertise with a genuine commitment to helping clients achieve their financial goals.
                 </p>
                 <p className="text-[oklch(0.40_0.01_260)] leading-relaxed mb-8 reveal" style={{transitionDelay:'200ms'}}>
-                  Susan understands the unique needs of South Florida's diverse business community. Whether you are a startup founder, a growing small business, or an individual seeking tax guidance, ASAP Accounting provides the attentive, knowledgeable service you deserve.
+                  Susan understands the unique needs of South Florida's diverse business community. Whether you are a startup founder, a growing small business, or an individual seeking tax guidance, ASAP Accounting provides the attentive, knowledgeable service you deserve. We proudly serve both English- and Spanish-speaking clients.
                 </p>
                 <div className="space-y-3 mb-8">
                   {credentials.map((c, i) => (

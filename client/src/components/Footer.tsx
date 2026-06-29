@@ -9,11 +9,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-4">
-            <img
-              src="/manus-storage/asap-logo-transparent_63ec8506.png"
-              alt="ASAP Accounting"
-              className="h-16 w-auto"
-            />
+            <div style={{background:'#000000', padding:'6px 12px', borderRadius:'4px', display:'inline-flex', alignItems:'center'}}>
+              <img
+                src="/manus-storage/asap-logo-transparent_63ec8506.png"
+                alt="ASAP Accounting"
+                className="h-12 w-auto"
+              />
+            </div>
             <p className="text-sm leading-relaxed text-white/50">
               Professional accounting, tax, and financial advisory services for individuals and businesses across South Florida.
             </p>

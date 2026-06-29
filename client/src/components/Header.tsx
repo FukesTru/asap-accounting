@@ -37,11 +37,13 @@ export default function Header() {
       <div className="container flex items-center justify-between h-20">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <img
-            src="/manus-storage/asap-logo-transparent_63ec8506.png"
-            alt="ASAP Accounting"
-            className="h-12 w-auto"
-          />
+          <div style={{background:'#000000', padding:'5px 10px', borderRadius:'4px', display:'inline-flex', alignItems:'center'}}>
+            <img
+              src="/manus-storage/asap-logo-transparent_63ec8506.png"
+              alt="ASAP Accounting"
+              className="h-10 w-auto"
+            />
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

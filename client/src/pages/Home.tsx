@@ -76,7 +76,7 @@ export default function Home() {
                 className="hero-enter text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.2em] mb-6 font-sans font-medium"
                 style={{animationName:'heroFadeUp', animationDuration:'0.9s', animationDelay:'320ms'}}
               >
-                Doral, FL — Certified Public Accountant
+                Doral, FL — Accounting & Tax Services
               </p>
               <h1
                 className="hero-enter text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-6"
@@ -110,7 +110,7 @@ export default function Home() {
               <div className="h-1 w-full" style={{background: 'linear-gradient(90deg, oklch(0.62 0.12 75), oklch(0.72 0.10 75))'}} />
               <div className="px-7 pt-6 pb-2 text-center">
                 <p className="font-serif text-white text-2xl leading-tight mb-1">Reach Out To Our Team</p>
-                <p className="text-xs text-white/60 mt-0.5">Speak with a CPA — no commitment required</p>
+                <p className="text-xs text-white/60 mt-0.5">Speak with our team — no commitment required</p>
                 <div className="h-px mt-4" style={{background: 'rgba(255,255,255,0.15)'}} />
               </div>
               <div className="px-4 pb-4">
@@ -157,8 +157,8 @@ export default function Home() {
             </div>
             <div className="w-px h-10 bg-[oklch(0.88_0.01_80)] hidden md:block" />
             <div className="reveal" style={{transitionDelay:'240ms'}}>
-              <p className="text-3xl font-serif text-[oklch(0.62_0.12_75)]">CPA</p>
-              <p className="text-xs text-[oklch(0.40_0.01_260)] uppercase tracking-wider mt-1">Certified</p>
+              <p className="text-3xl font-serif text-[oklch(0.62_0.12_75)]">EN/ES</p>
+              <p className="text-xs text-[oklch(0.40_0.01_260)] uppercase tracking-wider mt-1">Bilingual</p>
             </div>
           </div>
         </div>
@@ -210,20 +210,23 @@ export default function Home() {
             <div className="reveal">
               <img
                 src="/manus-storage/susan-headshot_3c40effc.png"
-                alt="Susan Rodriguez, CPA - Founder of ASAP Accounting"
+                alt="Susan Rodriguez - Founder of ASAP Accounting"
                 className="w-full max-w-md mx-auto lg:mx-0 object-cover aspect-[3/4] rounded-sm"
               />
             </div>
             <div className="reveal" style={{transitionDelay:'120ms'}}>
               <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.15em] mb-3 font-sans font-medium">About Us</p>
               <h2 className="text-3xl md:text-4xl text-white leading-tight mb-6 font-serif">
-                Meet Susan Rodriguez, CPA
+                Meet Susan Rodriguez
               </h2>
               <p className="text-white/60 leading-relaxed mb-4">
                 With over 15 years of experience in accounting and financial services, Susan founded ASAP Accounting to provide fast, reliable, and personalized financial support to individuals and businesses throughout South Florida.
               </p>
               <p className="text-white/60 leading-relaxed mb-8">
                 Susan specializes in helping small businesses, entrepreneurs, and families navigate the complexities of tax compliance, financial planning, and business growth.
+              </p>
+              <p className="text-white/60 leading-relaxed mb-8">
+                We proudly serve both English- and Spanish-speaking clients throughout South Florida.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/about" className="btn-outline-gold rounded-sm text-center">

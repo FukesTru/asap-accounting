@@ -54,7 +54,7 @@ export default function LocationPage({ city, description, intro, details }: Loca
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.15em] mb-3 font-sans font-medium reveal">Why ASAP Accounting</p>
             <h2 className="text-3xl md:text-4xl text-[oklch(0.15_0.01_260)] leading-tight mb-8 font-serif reveal" style={{transitionDelay:'80ms'}}>
-              Trusted CPA Services for {city} Residents &amp; Businesses
+              Trusted Accounting Services for {city} Residents &amp; Businesses
             </h2>
             <p className="text-[oklch(0.40_0.01_260)] text-lg leading-relaxed mb-6 reveal" style={{transitionDelay:'120ms'}}>{intro}</p>
             {details.map((d, i) => (
@@ -101,7 +101,7 @@ export default function LocationPage({ city, description, intro, details }: Loca
           <div className="max-w-2xl mx-auto text-center reveal">
             <div className="w-px h-12 bg-[oklch(0.62_0.12_75)] mx-auto mb-8" />
             <h2 className="text-3xl md:text-4xl text-[oklch(0.15_0.01_260)] leading-tight mb-6 font-serif">
-              Ready to Work with a {city} CPA?
+              Ready to Work with ASAP Accounting in {city}?
             </h2>
             <p className="text-[oklch(0.40_0.01_260)] text-lg leading-relaxed mb-10">
               ASAP Accounting serves clients throughout {city} and all of South Florida. Schedule your free consultation today — in person or virtually.
