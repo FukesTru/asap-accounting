@@ -101,9 +101,30 @@ export default function About() {
                 <p className="text-white/70 leading-relaxed mb-4 reveal" style={{transitionDelay:'120ms'}}>
                   Nubia Medina is an accountant with over 30 years of accounting experience. She also speaks Spanish and helps ASAP Accounting serve both English- and Spanish-speaking clients throughout South Florida.
                 </p>
-                <p className="text-white/70 leading-relaxed mb-8 reveal" style={{transitionDelay:'160ms'}}>
+                <p className="text-white/70 leading-relaxed mb-4 reveal" style={{transitionDelay:'160ms'}}>
                   Her decades of hands-on experience bring a depth of knowledge and reliability that our clients depend on. Nubia's background spans a wide range of accounting disciplines, making her an invaluable part of the ASAP Accounting team.
                 </p>
+                <p className="text-white/70 leading-relaxed mb-8 reveal" style={{transitionDelay:'200ms'}}>
+                  Nubia's bilingual capabilities allow ASAP Accounting to serve the full diversity of South Florida's business community — ensuring every client feels understood and supported in their preferred language.
+                </p>
+                <div className="space-y-3 mb-8">
+                  {[
+                    "Over 30 years of professional accounting experience",
+                    "Fluent in English and Spanish",
+                    "Broad expertise across multiple accounting disciplines",
+                    "Dedicated to personalized, reliable client service",
+                  ].map((c, i) => (
+                    <div key={i} className="flex items-start gap-3 reveal" style={{transitionDelay:`${240 + i * 60}ms`}}>
+                      <CheckCircle className="w-5 h-5 text-[oklch(0.62_0.12_75)] shrink-0 mt-0.5" />
+                      <p className="text-white/70 text-sm leading-relaxed">{c}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="reveal" style={{transitionDelay:'480ms'}}>
+                  <Link href="/book" className="btn-gold rounded-sm inline-block">
+                    Schedule a Consultation
+                  </Link>
+                </div>
               </div>
               <div className="order-1 lg:order-2 reveal" style={{transitionDelay:'80ms'}}>
                 <img
