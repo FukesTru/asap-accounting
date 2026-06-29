@@ -147,7 +147,7 @@ export default function Home() {
             </div>
             <div className="w-px h-10 bg-[oklch(0.88_0.01_80)] hidden md:block" />
             <div className="reveal" style={{transitionDelay:'80ms'}}>
-              <p className="text-3xl font-serif text-[oklch(0.62_0.12_75)]">15+</p>
+              <p className="text-3xl font-serif text-[oklch(0.62_0.12_75)]">45+</p>
               <p className="text-xs text-[oklch(0.40_0.01_260)] uppercase tracking-wider mt-1">Years Experience</p>
             </div>
             <div className="w-px h-10 bg-[oklch(0.88_0.01_80)] hidden md:block" />
@@ -157,7 +157,7 @@ export default function Home() {
             </div>
             <div className="w-px h-10 bg-[oklch(0.88_0.01_80)] hidden md:block" />
             <div className="reveal" style={{transitionDelay:'240ms'}}>
-              <p className="text-3xl font-serif text-[oklch(0.62_0.12_75)]">EN/ES</p>
+              <p className="text-3xl font-serif text-[oklch(0.62_0.12_75)]">EN/SP</p>
               <p className="text-xs text-[oklch(0.40_0.01_260)] uppercase tracking-wider mt-1">Bilingual</p>
             </div>
           </div>
