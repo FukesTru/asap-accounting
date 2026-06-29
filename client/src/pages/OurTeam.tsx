@@ -14,7 +14,8 @@ export default function OurTeam() {
               <img
                 src="/manus-storage/susan-headshot_3c40effc.png"
                 alt="Susan Rodriguez - Founder of ASAP Accounting"
-                className="w-full max-w-sm mx-auto object-cover aspect-[3/4] rounded-sm"
+                className="w-full max-w-sm mx-auto object-cover object-top rounded-sm"
+                style={{aspectRatio:'3/4'}}
               />
               <div>
                 <h2 className="text-3xl font-serif text-[oklch(0.15_0.01_260)] mb-2">Susan Rodriguez</h2>
@@ -42,7 +43,8 @@ export default function OurTeam() {
               <img
                 src="/manus-storage/nubia-medina-headshot_1116f78b.webp"
                 alt="Nubia Medina - Accountant at ASAP Accounting"
-                className="w-full max-w-sm mx-auto object-cover aspect-[3/4] rounded-sm order-1 md:order-2"
+                className="w-full max-w-sm mx-auto object-cover object-top rounded-sm order-1 md:order-2"
+                style={{aspectRatio:'3/4'}}
               />
             </div>
           </div>

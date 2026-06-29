@@ -211,7 +211,8 @@ export default function Home() {
               <img
                 src="/manus-storage/susan-headshot_3c40effc.png"
                 alt="Susan Rodriguez - Founder of ASAP Accounting"
-                className="w-full max-w-md mx-auto lg:mx-0 object-cover aspect-[3/4] rounded-sm"
+                className="w-full max-w-md mx-auto lg:mx-0 object-cover object-top rounded-sm"
+                style={{aspectRatio:'3/4'}}
               />
             </div>
             <div className="reveal" style={{transitionDelay:'120ms'}}>

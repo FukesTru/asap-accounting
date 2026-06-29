@@ -51,13 +51,14 @@ export default function About() {
                 <img
                   src="/manus-storage/susan-headshot_3c40effc.png"
                   alt="Susan Rodriguez - Founder of ASAP Accounting"
-                  className="w-full max-w-md mx-auto object-cover aspect-[3/4]"
+                  className="w-full max-w-md mx-auto object-cover object-top"
+                  style={{aspectRatio: '3/4'}}
                 />
               </div>
               <div>
-                <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.15em] mb-3 font-sans font-medium reveal">Founded by Susan Rodriguez</p>
+                <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.15em] mb-3 font-sans font-medium reveal">Founder &amp; Accountant</p>
                 <h2 className="text-3xl md:text-4xl text-[oklch(0.15_0.01_260)] leading-tight mb-6 font-serif reveal" style={{transitionDelay:'80ms'}}>
-                  Dedicated to Your Financial Well-Being
+                  Susan Rodriguez
                 </h2>
                 <p className="text-[oklch(0.40_0.01_260)] leading-relaxed mb-4 reveal" style={{transitionDelay:'120ms'}}>
                   ASAP Accounting LLC was founded with a clear mission: to provide fast, reliable, and personalized accounting services to individuals and businesses throughout South Florida. Based in Doral, FL, we serve clients across Miami-Dade County, Broward County, and beyond.
@@ -87,19 +88,49 @@ export default function About() {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Nubia Medina Bio */}
       <section className="section-dark py-20 md:py-28">
+        <div className="container">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+              <div className="order-2 lg:order-1">
+                <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.15em] mb-3 font-sans font-medium reveal">Accountant</p>
+                <h2 className="text-3xl md:text-4xl text-white leading-tight mb-6 font-serif reveal" style={{transitionDelay:'80ms'}}>
+                  Nubia Medina
+                </h2>
+                <p className="text-white/70 leading-relaxed mb-4 reveal" style={{transitionDelay:'120ms'}}>
+                  Nubia Medina is an accountant with over 30 years of accounting experience. She also speaks Spanish and helps ASAP Accounting serve both English- and Spanish-speaking clients throughout South Florida.
+                </p>
+                <p className="text-white/70 leading-relaxed mb-8 reveal" style={{transitionDelay:'160ms'}}>
+                  Her decades of hands-on experience bring a depth of knowledge and reliability that our clients depend on. Nubia's background spans a wide range of accounting disciplines, making her an invaluable part of the ASAP Accounting team.
+                </p>
+              </div>
+              <div className="order-1 lg:order-2 reveal" style={{transitionDelay:'80ms'}}>
+                <img
+                  src="/manus-storage/nubia-medina-headshot_1116f78b.webp"
+                  alt="Nubia Medina - Accountant at ASAP Accounting"
+                  className="w-full max-w-md mx-auto object-cover object-top"
+                  style={{aspectRatio: '3/4'}}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="section-cream py-20 md:py-28">
         <div className="container">
           <div className="text-center mb-14">
             <p className="text-[oklch(0.62_0.12_75)] text-sm uppercase tracking-[0.15em] mb-3 font-sans font-medium reveal">What Guides Us</p>
-            <h2 className="text-3xl md:text-4xl text-white leading-tight font-serif reveal" style={{transitionDelay:'80ms'}}>Our Core Values</h2>
+            <h2 className="text-3xl md:text-4xl text-[oklch(0.15_0.01_260)] leading-tight font-serif reveal" style={{transitionDelay:'80ms'}}>Our Core Values</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {values.map((v, i) => (
-              <div key={v.title} className="reveal border border-white/10 p-8 hover:border-[oklch(0.62_0.12_75)] transition-all duration-300" style={{transitionDelay:`${i * 80}ms`}}>
+              <div key={v.title} className="reveal border border-[oklch(0.88_0.01_80)] p-8 hover:border-[oklch(0.62_0.12_75)] transition-all duration-300" style={{transitionDelay:`${i * 80}ms`}}>
                 <div className="w-8 h-px bg-[oklch(0.62_0.12_75)] mb-5" />
-                <h3 className="text-xl text-white mb-3 font-serif">{v.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{v.desc}</p>
+                <h3 className="text-xl text-[oklch(0.15_0.01_260)] mb-3 font-serif">{v.title}</h3>
+                <p className="text-[oklch(0.40_0.01_260)] text-sm leading-relaxed">{v.desc}</p>
               </div>
             ))}
           </div>
@@ -107,14 +138,14 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="section-cream py-20 md:py-28">
+      <section className="section-dark py-20 md:py-28">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center reveal">
             <div className="w-px h-12 bg-[oklch(0.62_0.12_75)] mx-auto mb-8" />
-            <h2 className="text-3xl md:text-4xl text-[oklch(0.15_0.01_260)] leading-tight mb-6 font-serif">
+            <h2 className="text-3xl md:text-4xl text-white leading-tight mb-6 font-serif">
               Ready to Work With Us?
             </h2>
-            <p className="text-[oklch(0.40_0.01_260)] text-lg leading-relaxed mb-10">
+            <p className="text-white/60 text-lg leading-relaxed mb-10">
               Let us show you what personalized, professional accounting looks like. Your first consultation is free.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
