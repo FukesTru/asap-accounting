@@ -42,6 +42,7 @@ const LocationPembrokePines = lazy(() => import("./pages/locations/PembrokePines
 const LocationMiramar = lazy(() => import("./pages/locations/Miramar"));
 const LocationFortLauderdale = lazy(() => import("./pages/locations/FortLauderdale"));
 const Book = lazy(() => import("./pages/Book"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 
 function PageLoader() {
   return (
@@ -83,6 +84,7 @@ function Router() {
         <Route path="/locations/miramar" component={LocationMiramar} />
         <Route path="/locations/fort-lauderdale" component={LocationFortLauderdale} />
         <Route path="/book" component={Book} />
+        <Route path="/terms-of-service" component={TermsOfService} />
         <Route path="/404" component={NotFound} />
         <Route component={NotFound} />
       </Switch>
