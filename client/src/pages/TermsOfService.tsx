@@ -21,27 +21,27 @@ export default function TermsOfService() {
       <section className="section-cream py-20 md:py-28">
         <div className="container">
           <div className="max-w-3xl mx-auto reveal">
-            <div className="prose prose-sm max-w-none text-[oklch(0.40_0.01_260)] leading-relaxed space-y-5 text-sm">
+            <div className="space-y-5 text-sm text-[oklch(0.40_0.01_260)] leading-relaxed">
 
               <p><strong className="text-[oklch(0.15_0.01_260)]">ASAP ACCOUNTING LLC</strong><br />Effective Date: Jan 1st, 2026</p>
 
               <p><strong className="text-[oklch(0.15_0.01_260)]">SMS Messaging Terms &amp; Compliance</strong></p>
 
-              <p><strong className="text-[oklch(0.15_0.01_260)]">Program Description:</strong> This messaging program sends appointment confirmation and reminder messages to customers who have booked an appointment with ASAP ACCOUNTING LLC through our website at Asap-accounting.us, or via our scheduling forms, and have explicitly opted in to receive SMS notifications. Opt-in is collected via web forms with a dedicated checkbox for SMS consent. Messages include scheduling confirmations, appointment reminders, rescheduling updates, and customer support communications.</p>
+              <p><strong className="text-[oklch(0.15_0.01_260)]">1. Program Description:</strong> This messaging program sends appointment confirmation and reminder messages to customers who have booked an appointment with ASAP ACCOUNTING LLC through our website at <a href="https://asap-accounting.us" className="text-[oklch(0.62_0.12_75)] hover:underline">https://asap-accounting.us</a>, or via our scheduling forms, and have explicitly opted in to receive SMS notifications. Opt-in is collected via web forms with a dedicated checkbox for SMS consent. Messages include scheduling confirmations, appointment reminders, rescheduling updates, and customer support communications.</p>
 
-              <p><strong className="text-[oklch(0.15_0.01_260)]">Cancellation Instructions:</strong> You can cancel the SMS service at any time. Simply text "STOP" to the same number that sent you messages. Upon sending "STOP," we will confirm your unsubscribe status via SMS. Following this confirmation, you will no longer receive SMS messages from us. To rejoin, sign up as you did initially, and we will resume sending SMS messages to you.</p>
+              <p><strong className="text-[oklch(0.15_0.01_260)]">2. Cancellation Instructions:</strong> You can cancel the SMS service at any time. Simply text "STOP" to the same number that sent you messages. Upon sending "STOP," we will confirm your unsubscribe status via SMS. Following this confirmation, you will no longer receive SMS messages from us. To rejoin, sign up as you did initially, and we will resume sending SMS messages to you.</p>
 
-              <p><strong className="text-[oklch(0.15_0.01_260)]">Support Information:</strong> If you experience issues with the messaging program, reply with the keyword "HELP" for more assistance, or reach out directly to <a href="mailto:Susanr.rodriguez00@gmail.com" className="text-[oklch(0.62_0.12_75)] hover:underline">Susanr.rodriguez00@gmail.com</a> or call <a href="tel:+13058777107" className="text-[oklch(0.62_0.12_75)] hover:underline">(305) 877-7107</a> during business hours.</p>
+              <p><strong className="text-[oklch(0.15_0.01_260)]">3. Support Information:</strong> If you experience issues with the messaging program, reply with the keyword "HELP" for more assistance, or reach out directly to <a href="mailto:susanr.rodriguez00@gmail.com" className="text-[oklch(0.62_0.12_75)] hover:underline">susanr.rodriguez00@gmail.com</a> or call <a href="tel:+13058777107" className="text-[oklch(0.62_0.12_75)] hover:underline">(305) 877-7107</a> during business hours.</p>
 
-              <p><strong className="text-[oklch(0.15_0.01_260)]">Carrier Liability:</strong> Carriers are not liable for delayed or undelivered messages.</p>
+              <p><strong className="text-[oklch(0.15_0.01_260)]">4. Carrier Liability:</strong> Carriers are not liable for delayed or undelivered messages.</p>
 
-              <p><strong className="text-[oklch(0.15_0.01_260)]">Message &amp; Data Rates:</strong> Message and data rates may apply for messages sent to you from us and to us from you. Message frequency varies based on your service usage and appointment schedule. For questions about your text plan or data plan, contact your wireless provider.</p>
+              <p><strong className="text-[oklch(0.15_0.01_260)]">5. Message &amp; Data Rates:</strong> Message and data rates may apply for messages sent to you from us and to us from you. Message frequency varies based on your service usage and appointment schedule. For questions about your text plan or data plan, contact your wireless provider.</p>
 
-              <p><strong className="text-[oklch(0.15_0.01_260)]">Supported Carriers:</strong> Our SMS program works with all major U.S. wireless carriers, including AT&amp;T, T-Mobile, Verizon, Sprint, and most regional carriers.</p>
+              <p><strong className="text-[oklch(0.15_0.01_260)]">6. Supported Carriers:</strong> Our SMS program works with all major U.S. wireless carriers, including AT&amp;T, T-Mobile, Verizon, Sprint, and most regional carriers.</p>
 
-              <p><strong className="text-[oklch(0.15_0.01_260)]">Age Restriction:</strong> You must be 18 years or older to participate in our SMS program.</p>
+              <p><strong className="text-[oklch(0.15_0.01_260)]">7. Age Restriction:</strong> You must be 18 years or older to participate in our SMS program.</p>
 
-              <p><strong className="text-[oklch(0.15_0.01_260)]">Privacy Policy:</strong> For privacy-related inquiries, please refer to our <a href="/privacy-policy" className="text-[oklch(0.62_0.12_75)] hover:underline">Privacy Policy</a> at Asap-accounting.us/privacy-policy.</p>
+              <p><strong className="text-[oklch(0.15_0.01_260)]">8. Privacy Policy:</strong> For privacy-related inquiries, please refer to our Privacy Policy at <a href="/privacy-policy" className="text-[oklch(0.62_0.12_75)] hover:underline">https://asap-accounting.us/privacy-policy</a>.</p>
 
               <p>We comply with all applicable laws and regulations, including the Telephone Consumer Protection Act (TCPA) and CTIA guidelines, regarding the use of SMS communications.</p>
 
@@ -57,13 +57,15 @@ export default function TermsOfService() {
 
               <p><strong className="text-[oklch(0.15_0.01_260)]">Our Limited License to You</strong></p>
 
-              <p>This Site and all the materials available on the Site are the property of ASAP ACCOUNTING LLC and/or our affiliates or licensors and are protected by copyright, trademark, and other intellectual property laws. The Site is provided solely for your personal non-commercial use. You may not use the Site or the materials available on the Site in a manner that constitutes an infringement of our rights or that has not been authorized by us.</p>
+              <p>This Site and all the materials available on the Site are the property of ASAP ACCOUNTING LLC and/or our affiliates or licensors and are protected by copyright, trademark, and other intellectual property laws. The Site is provided solely for your personal non-commercial use.</p>
+
+              <p>You may not use the Site or the materials available on the Site in a manner that constitutes an infringement of our rights or that has not been authorized by us.</p>
 
               <p>Unless explicitly authorized, you may not modify, copy, reproduce, republish, upload, post, transmit, translate, sell, create derivative works, exploit, or distribute in any manner or medium any material from the Site. However, you may download and/or print one copy of individual pages for your personal, non-commercial use, provided that you keep intact all copyright and other proprietary notices.</p>
 
               <p><strong className="text-[oklch(0.15_0.01_260)]">Your License to Us</strong></p>
 
-              <p>By posting or submitting any material (including comments, blog entries, social media posts, photos, and videos) to us via the Site, internet groups, or other digital venues, you represent that you own the material or have obtained the necessary permissions. You grant us a royalty-free, perpetual, irrevocable, non-exclusive, worldwide license to use, modify, transmit, sell, exploit, create derivative works from, distribute, and publicly perform or display such material.</p>
+              <p>By posting or submitting any material, including comments, blog entries, social media posts, photos, and videos, to us via the Site, internet groups, or other digital venues, you represent that you own the material or have obtained the necessary permissions. You grant us a royalty-free, perpetual, irrevocable, non-exclusive, worldwide license to use, modify, transmit, sell, exploit, create derivative works from, distribute, and publicly perform or display such material.</p>
 
               <p><strong className="text-[oklch(0.15_0.01_260)]">Disclaimers</strong></p>
 
@@ -83,7 +85,7 @@ export default function TermsOfService() {
 
               <p>To access certain features of the Site, you may be required to register and create an account. You agree to provide accurate, current, and complete information during the registration process. You are responsible for maintaining the confidentiality of your login credentials and for all activities conducted under your account.</p>
 
-              <p>If you suspect unauthorized use of your account, notify us immediately at <a href="mailto:Susanr.rodriguez00@gmail.com" className="text-[oklch(0.62_0.12_75)] hover:underline">Susanr.rodriguez00@gmail.com</a>. We are not liable for any loss or damage arising from your failure to comply with this obligation.</p>
+              <p>If you suspect unauthorized use of your account, notify us immediately at <a href="mailto:susanr.rodriguez00@gmail.com" className="text-[oklch(0.62_0.12_75)] hover:underline">susanr.rodriguez00@gmail.com</a>. We are not liable for any loss or damage arising from your failure to comply with this obligation.</p>
 
               <p><strong className="text-[oklch(0.15_0.01_260)]">Termination</strong></p>
 
@@ -101,9 +103,12 @@ export default function TermsOfService() {
 
               <p>
                 ASAP ACCOUNTING LLC<br />
+                8400 NW 33rd St<br />
+                SUITE 310 PMB #3372<br />
+                DORAL, FL 33122<br />
                 Phone: <a href="tel:+13058777107" className="text-[oklch(0.62_0.12_75)] hover:underline">(305) 877-7107</a><br />
-                Email: <a href="mailto:Susanr.rodriguez00@gmail.com" className="text-[oklch(0.62_0.12_75)] hover:underline">Susanr.rodriguez00@gmail.com</a><br />
-                Website: <a href="https://Asap-accounting.us" className="text-[oklch(0.62_0.12_75)] hover:underline">Asap-accounting.us</a>
+                Email: <a href="mailto:susanr.rodriguez00@gmail.com" className="text-[oklch(0.62_0.12_75)] hover:underline">susanr.rodriguez00@gmail.com</a><br />
+                Website: <a href="https://asap-accounting.us" className="text-[oklch(0.62_0.12_75)] hover:underline">https://asap-accounting.us</a>
               </p>
 
               <p>By using our website and services, you consent to these Terms of Service.</p>
