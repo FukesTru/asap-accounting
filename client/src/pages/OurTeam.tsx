@@ -56,7 +56,7 @@ export default function OurTeam() {
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl text-[oklch(0.15_0.01_260)] leading-tight mb-6 font-serif">Work With Our Team</h2>
           <p className="text-[oklch(0.40_0.01_260)] text-lg leading-relaxed mb-10 max-w-xl mx-auto">Schedule a consultation to discuss your financial needs with Susan, Nubia, and the ASAP Accounting team. Spanish-speaking clients are welcome.</p>
-          <Link href="/book" className="btn-gold rounded-sm inline-block">Book a Free Consultation</Link>
+          <Link href="/contact" className="btn-gold rounded-sm inline-block">Book a Free Consultation</Link>
         </div>
       </section>
     </div>

@@ -55,7 +55,7 @@ export default function Footer() {
               <li><Link href="/testimonials" className="text-sm hover:text-[oklch(0.62_0.12_75)] transition-colors">Testimonials</Link></li>
               <li><Link href="/faq" className="text-sm hover:text-[oklch(0.62_0.12_75)] transition-colors">FAQ</Link></li>
               <li><Link href="/contact" className="text-sm hover:text-[oklch(0.62_0.12_75)] transition-colors">Contact</Link></li>
-              <li><Link href="/book" className="text-sm hover:text-[oklch(0.62_0.12_75)] transition-colors">Book a Consultation</Link></li>
+              <li><Link href="/contact" className="text-sm hover:text-[oklch(0.62_0.12_75)] transition-colors">Book a Consultation</Link></li>
             </ul>
           </div>
 

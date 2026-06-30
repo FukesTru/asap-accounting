@@ -94,7 +94,7 @@ export default function Home() {
                 className="hero-enter flex flex-col sm:flex-row gap-4"
                 style={{animationName:'heroFadeUp', animationDuration:'1.0s', animationDelay:'740ms'}}
               >
-                <Link href="/book" className="btn-gold rounded-sm text-center" style={{color:'#ffffff'}}>
+                <Link href="/contact" className="btn-gold rounded-sm text-center" style={{color:'#ffffff'}}>
                   Book a Free Consultation
                 </Link>
                 <a href="tel:3058777107" className="btn-outline-gold rounded-sm text-center">
@@ -102,35 +102,40 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            {/* Right: GHL consultation form */}
+            {/* Right: CTA card */}
             <div
-              className="hero-enter relative"
-              style={{background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.15)', boxShadow: '0 25px 60px rgba(0,0,0,0.4)', animationName:'heroFadeUp', animationDuration:'1.1s', animationDelay:'560ms'}}
+              className="hero-enter relative hidden lg:block"
+              style={{animationName:'heroFadeUp', animationDuration:'1.1s', animationDelay:'560ms'}}
             >
-              <div className="h-1 w-full" style={{background: 'linear-gradient(90deg, oklch(0.62 0.12 75), oklch(0.72 0.10 75))'}} />
-              <div className="px-7 pt-6 pb-2 text-center">
-                <p className="font-serif text-white text-2xl leading-tight mb-1">Reach Out To Our Team</p>
-                <p className="text-xs text-white/60 mt-0.5">Speak with our team — no commitment required</p>
-                <div className="h-px mt-4" style={{background: 'rgba(255,255,255,0.15)'}} />
-              </div>
-              <div className="px-4 pb-4">
-                <iframe
-                  src="https://api.leadconnectorhq.com/widget/form/L0f9VxAUVJUOvPm938qF"
-                  style={{width:'100%', height:'639px', border:'none', borderRadius:'4px'}}
-                  id="inline-L0f9VxAUVJUOvPm938qF"
-                  data-layout="{'id':'INLINE'}"
-                  data-trigger-type="alwaysShow"
-                  data-trigger-value=""
-                  data-activation-type="alwaysActivated"
-                  data-activation-value=""
-                  data-deactivation-type="neverDeactivate"
-                  data-deactivation-value=""
-                  data-form-name="ASAP Website Form"
-                  data-height="639"
-                  data-layout-iframe-id="inline-L0f9VxAUVJUOvPm938qF"
-                  data-form-id="L0f9VxAUVJUOvPm938qF"
-                  title="ASAP Website Form"
-                />
+              <div
+                className="relative p-10 text-center"
+                style={{background: 'rgba(255,255,255,0.07)', backdropFilter: 'blur(14px)', border: '1px solid rgba(255,255,255,0.14)', boxShadow: '0 30px 70px rgba(0,0,0,0.45)'}}
+              >
+                <div className="h-px w-16 mx-auto mb-8" style={{background:'oklch(0.62 0.12 75)'}} />
+                <p className="text-[oklch(0.62_0.12_75)] text-xs uppercase tracking-[0.2em] font-sans font-medium mb-4">Free Consultation</p>
+                <h2 className="font-serif text-white text-3xl leading-tight mb-5">
+                  Ready to Take Control of Your Finances?
+                </h2>
+                <p className="text-white/60 text-sm leading-relaxed mb-8">
+                  Speak with Susan Rodriguez and the ASAP Accounting team. No obligation, no pressure — just honest guidance for your financial situation.
+                </p>
+                <div className="space-y-3">
+                  <Link href="/contact" className="btn-gold rounded-sm text-center block w-full" style={{color:'#ffffff'}}>
+                    Book a Free Consultation
+                  </Link>
+                  <a href="tel:+13058777107" className="btn-outline-gold rounded-sm text-center block w-full">
+                    (305) 877-7107
+                  </a>
+                </div>
+                <div className="mt-8 pt-8 border-t border-white/10">
+                  <div className="flex items-center justify-center gap-6 text-xs text-white/40">
+                    <span>Mon – Fri: 9am – 5pm</span>
+                    <span className="w-px h-4 bg-white/20" />
+                    <span>EN / SP</span>
+                    <span className="w-px h-4 bg-white/20" />
+                    <span>Doral, FL</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -196,7 +201,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12 reveal">
-            <Link href="/book" className="btn-gold rounded-sm inline-block">
+            <Link href="/contact" className="btn-gold rounded-sm inline-block">
               Schedule a Free Consultation
             </Link>
           </div>
@@ -335,7 +340,7 @@ export default function Home() {
               Schedule a free consultation and discover how ASAP Accounting can help you save time, reduce taxes, and grow your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/book" className="btn-gold rounded-sm text-center">
+              <Link href="/contact" className="btn-gold rounded-sm text-center">
                 Book a Free Consultation
               </Link>
               <a href="tel:+13058777107" className="btn-outline-gold rounded-sm text-center">

@@ -33,7 +33,7 @@ export default function ServicePage({ label, title, subtitle, intro, benefits, d
               {subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center reveal" style={{transitionDelay:'240ms'}}>
-              <Link href="/book" className="btn-gold rounded-sm text-center">{ctaText || "Book a Free Consultation"}</Link>
+              <Link href="/contact" className="btn-gold rounded-sm text-center">{ctaText || "Book a Free Consultation"}</Link>
               <a href="tel:+13058777107" className="btn-outline-gold rounded-sm text-center">
                 <span className="flex items-center gap-2 justify-center"><Phone className="w-4 h-4" /> (305) 877-7107</span>
               </a>
@@ -110,7 +110,7 @@ export default function ServicePage({ label, title, subtitle, intro, benefits, d
               Schedule a free consultation to discuss how we can help with your specific needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/book" className="btn-gold rounded-sm text-center">
+              <Link href="/contact" className="btn-gold rounded-sm text-center">
                 Book a Free Consultation
               </Link>
               <a href="tel:+13058777107" className="btn-outline-gold rounded-sm text-center">(305) 877-7107</a>

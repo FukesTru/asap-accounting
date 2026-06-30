@@ -30,7 +30,7 @@ export default function Services() {
               From daily bookkeeping to long-term wealth planning, ASAP Accounting provides the full spectrum of financial services your business and family need.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center reveal" style={{transitionDelay:'240ms'}}>
-              <Link href="/book" className="btn-gold rounded-sm text-center">Book a Free Consultation</Link>
+              <Link href="/contact" className="btn-gold rounded-sm text-center">Book a Free Consultation</Link>
               <a href="tel:+13058777107" className="btn-outline-gold rounded-sm text-center">
                 <span className="flex items-center gap-2 justify-center"><Phone className="w-4 h-4" /> (305) 877-7107</span>
               </a>
@@ -82,7 +82,7 @@ export default function Services() {
               Book a free consultation and we will assess your situation and recommend the right services for your needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/book" className="btn-gold rounded-sm text-center">Book a Free Consultation</Link>
+              <Link href="/contact" className="btn-gold rounded-sm text-center">Book a Free Consultation</Link>
               <a href="tel:+13058777107" className="btn-outline-gold rounded-sm text-center">(305) 877-7107</a>
             </div>
           </div>

@@ -83,7 +83,7 @@ export default function Testimonials() {
               Schedule a free consultation and experience the ASAP Accounting difference for yourself.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/book" className="btn-gold rounded-sm text-center">Book a Free Consultation</Link>
+              <Link href="/contact" className="btn-gold rounded-sm text-center">Book a Free Consultation</Link>
               <a href="tel:+13058777107" className="btn-outline-gold rounded-sm text-center">
                 <span className="flex items-center gap-2 justify-center"><Phone className="w-4 h-4" /> (305) 877-7107</span>
               </a>

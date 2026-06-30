@@ -100,7 +100,7 @@ export default function Header() {
         </nav>
 
         {/* CTA Button */}
-        <Link href="/book" className="hidden lg:block btn-gold rounded-sm" style={{color: '#ffffff', fontSize: '0.75rem'}}>
+        <Link href="/contact" className="hidden lg:block btn-gold rounded-sm" style={{color: '#ffffff', fontSize: '0.75rem'}}>
           Book a Consultation
         </Link>
 
@@ -177,7 +177,7 @@ export default function Header() {
             </Link>
 
             <div className="pt-4">
-              <Link href="/book" onClick={() => setMobileOpen(false)} className="block text-center btn-gold rounded-sm text-xs">
+              <Link href="/contact" onClick={() => setMobileOpen(false)} className="block text-center btn-gold rounded-sm text-xs">
                 Book a Consultation
               </Link>
             </div>

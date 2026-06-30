@@ -39,7 +39,7 @@ export default function LocationPage({ city, description, intro, details }: Loca
               {description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center reveal" style={{transitionDelay:'240ms'}}>
-              <Link href="/book" className="btn-gold rounded-sm text-center">Book a Free Consultation</Link>
+              <Link href="/contact" className="btn-gold rounded-sm text-center">Book a Free Consultation</Link>
               <a href="tel:+13058777107" className="btn-outline-gold rounded-sm text-center">
                 <span className="flex items-center gap-2 justify-center"><Phone className="w-4 h-4" /> (305) 877-7107</span>
               </a>
@@ -107,7 +107,7 @@ export default function LocationPage({ city, description, intro, details }: Loca
               ASAP Accounting serves clients throughout {city} and all of South Florida. Schedule your free consultation today — in person or virtually.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/book" className="btn-gold rounded-sm text-center">Book a Free Consultation</Link>
+              <Link href="/contact" className="btn-gold rounded-sm text-center">Book a Free Consultation</Link>
               <a href="tel:+13058777107" className="btn-outline-gold rounded-sm text-center">(305) 877-7107</a>
             </div>
           </div>

@@ -33,7 +33,7 @@ export default function About() {
               A trusted South Florida accounting firm built on integrity, expertise, and a commitment to your financial success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center reveal" style={{transitionDelay:'240ms'}}>
-              <Link href="/book" className="btn-gold rounded-sm text-center">Book a Free Consultation</Link>
+              <Link href="/contact" className="btn-gold rounded-sm text-center">Book a Free Consultation</Link>
               <a href="tel:+13058777107" className="btn-outline-gold rounded-sm text-center">
                 <span className="flex items-center gap-2 justify-center"><Phone className="w-4 h-4" /> (305) 877-7107</span>
               </a>
@@ -78,7 +78,7 @@ export default function About() {
                   ))}
                 </div>
                 <div className="reveal" style={{transitionDelay:'480ms'}}>
-                  <Link href="/book" className="btn-gold rounded-sm inline-block">
+                  <Link href="/contact" className="btn-gold rounded-sm inline-block">
                     Schedule a Consultation
                   </Link>
                 </div>
@@ -121,7 +121,7 @@ export default function About() {
                   ))}
                 </div>
                 <div className="reveal" style={{transitionDelay:'480ms'}}>
-                  <Link href="/book" className="btn-gold rounded-sm inline-block">
+                  <Link href="/contact" className="btn-gold rounded-sm inline-block">
                     Schedule a Consultation
                   </Link>
                 </div>
@@ -170,7 +170,7 @@ export default function About() {
               Let us show you what personalized, professional accounting looks like. Your first consultation is free.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/book" className="btn-gold rounded-sm text-center">Book a Free Consultation</Link>
+              <Link href="/contact" className="btn-gold rounded-sm text-center">Book a Free Consultation</Link>
               <a href="tel:+13058777107" className="btn-outline-gold rounded-sm text-center">(305) 877-7107</a>
             </div>
           </div>

@@ -51,7 +51,7 @@ export default function Contact() {
               We are here to help. Reach out to schedule a consultation or ask a question — we respond within one business day.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center reveal" style={{transitionDelay:'240ms'}}>
-              <Link href="/book" className="btn-gold rounded-sm text-center">Book a Free Consultation</Link>
+              <Link href="/contact" className="btn-gold rounded-sm text-center">Book a Free Consultation</Link>
               <a href="tel:+13058777107" className="btn-outline-gold rounded-sm text-center">
                 <span className="flex items-center gap-2 justify-center"><Phone className="w-4 h-4" /> (305) 877-7107</span>
               </a>
@@ -92,7 +92,7 @@ export default function Contact() {
                   ))}
                 </div>
                 <div className="mt-10 reveal" style={{transitionDelay:'480ms'}}>
-                  <Link href="/book" className="btn-gold rounded-sm inline-block">Book a Free Consultation</Link>
+                  <Link href="/contact" className="btn-gold rounded-sm inline-block">Book a Free Consultation</Link>
                 </div>
               </div>
 
@@ -107,9 +107,9 @@ export default function Contact() {
                   </div>
                   <div className="px-4 pb-4">
                     <iframe
-                      src="https://api.leadconnectorhq.com/widget/form/L0f9VxAUVJUOvPm938qF"
-                      style={{width:'100%', height:'639px', border:'none', borderRadius:'4px'}}
-                      id="inline-contact-L0f9VxAUVJUOvPm938qF"
+                      src="https://api.leadconnectorhq.com/widget/form/5PNmgvGo3i6xCU5e1XgC"
+                      style={{width:'100%', height:'752px', border:'none', borderRadius:'25px'}}
+                      id="inline-5PNmgvGo3i6xCU5e1XgC"
                       data-layout="{'id':'INLINE'}"
                       data-trigger-type="alwaysShow"
                       data-trigger-value=""
@@ -117,11 +117,11 @@ export default function Contact() {
                       data-activation-value=""
                       data-deactivation-type="neverDeactivate"
                       data-deactivation-value=""
-                      data-form-name="ASAP Website Form"
-                      data-height="639"
-                      data-layout-iframe-id="inline-contact-L0f9VxAUVJUOvPm938qF"
-                      data-form-id="L0f9VxAUVJUOvPm938qF"
-                      title="ASAP Website Form"
+                      data-form-name="A2P Form"
+                      data-height="752"
+                      data-layout-iframe-id="inline-5PNmgvGo3i6xCU5e1XgC"
+                      data-form-id="5PNmgvGo3i6xCU5e1XgC"
+                      title="A2P Form"
                     />
                   </div>
                 </div>
@@ -143,7 +143,7 @@ export default function Contact() {
               Call us directly or book a time that works for you. Your first consultation is completely free.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/book" className="btn-gold rounded-sm text-center">Book a Free Consultation</Link>
+              <Link href="/contact" className="btn-gold rounded-sm text-center">Book a Free Consultation</Link>
               <a href="tel:+13058777107" className="btn-outline-gold rounded-sm text-center">(305) 877-7107</a>
             </div>
           </div>
