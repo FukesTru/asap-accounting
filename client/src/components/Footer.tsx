@@ -99,6 +99,8 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <Link href="/terms-of-service" className="text-xs text-white/40 hover:text-[oklch(0.62_0.12_75)] transition-colors">Terms of Service</Link>
             <span className="text-white/20 text-xs">|</span>
+            <Link href="/privacy-policy" className="text-xs text-white/40 hover:text-[oklch(0.62_0.12_75)] transition-colors">Privacy Policy</Link>
+            <span className="text-white/20 text-xs">|</span>
             <p className="text-xs text-white/40">Doral, FL | Serving Miami-Dade, Broward &amp; South Florida</p>
           </div>
         </div>
