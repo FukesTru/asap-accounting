@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Calculator, FileText, TrendingUp, DollarSign, Shield, PiggyBank, Heart, ArrowRight, Phone } from "lucide-react";
+import { Calculator, FileText, TrendingUp, DollarSign, Shield, PiggyBank, Heart, ArrowRight, Phone, ClipboardCheck, Globe, Users, Building2 } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const services = [
@@ -10,6 +10,10 @@ const services = [
   { icon: Shield, name: "Financial Planning", desc: "Comprehensive financial roadmaps tailored to your goals. From budgeting to investment strategy, we help you build a secure future.", href: "/services/financial-planning" },
   { icon: PiggyBank, name: "Retirement & Wealth Planning", desc: "Strategic planning for retirement accounts, wealth accumulation, and long-term financial security for you and your family.", href: "/services/retirement-wealth-planning" },
   { icon: Heart, name: "Life Insurance", desc: "Protect your family and business with the right life insurance coverage. We help you evaluate options and find the best fit.", href: "/services/life-insurance" },
+  { icon: ClipboardCheck, name: "Audit & Attestation", desc: "Independent audit and attestation services for businesses, non-profits, and associations. We identify trends and opportunities for organizational improvement.", href: "/services/audit" },
+  { icon: Globe, name: "International Tax", desc: "U.S. and international tax compliance for high net worth individuals, partnerships, and corporations operating across borders since 2009.", href: "/services/international-tax" },
+  { icon: Users, name: "Non-Profit Services", desc: "Specialized accounting and audit services for non-profit organizations across a wide range of sectors, missions, and governance structures.", href: "/services/non-profit" },
+  { icon: Building2, name: "Cooperative Associations", desc: "Over 30 years of experience auditing condominiums, homeowners associations, and cooperative associations throughout South Florida.", href: "/services/cooperative-associations" },
 ];
 
 export default function Services() {

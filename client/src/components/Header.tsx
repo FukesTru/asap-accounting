@@ -10,6 +10,10 @@ const services = [
   { name: "Financial Planning", href: "/services/financial-planning" },
   { name: "Retirement & Wealth Planning", href: "/services/retirement-wealth-planning" },
   { name: "Life Insurance", href: "/services/life-insurance" },
+  { name: "Audit & Attestation", href: "/services/audit" },
+  { name: "International Tax", href: "/services/international-tax" },
+  { name: "Non-Profit Services", href: "/services/non-profit" },
+  { name: "Cooperative Associations", href: "/services/cooperative-associations" },
 ];
 
 const locations = [

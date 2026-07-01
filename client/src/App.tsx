@@ -27,6 +27,10 @@ const Payroll = lazy(() => import("./pages/services/Payroll"));
 const FinancialPlanning = lazy(() => import("./pages/services/FinancialPlanning"));
 const RetirementWealth = lazy(() => import("./pages/services/RetirementWealth"));
 const LifeInsurance = lazy(() => import("./pages/services/LifeInsurance"));
+const Audit = lazy(() => import("./pages/services/Audit"));
+const InternationalTax = lazy(() => import("./pages/services/InternationalTax"));
+const NonProfit = lazy(() => import("./pages/services/NonProfit"));
+const CooperativeAssociations = lazy(() => import("./pages/services/CooperativeAssociations"));
 const Testimonials = lazy(() => import("./pages/Testimonials"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -70,6 +74,10 @@ function Router() {
         <Route path="/services/financial-planning" component={FinancialPlanning} />
         <Route path="/services/retirement-wealth-planning" component={RetirementWealth} />
         <Route path="/services/life-insurance" component={LifeInsurance} />
+        <Route path="/services/audit" component={Audit} />
+        <Route path="/services/international-tax" component={InternationalTax} />
+        <Route path="/services/non-profit" component={NonProfit} />
+        <Route path="/services/cooperative-associations" component={CooperativeAssociations} />
         <Route path="/testimonials" component={Testimonials} />
         <Route path="/faq" component={FAQ} />
         <Route path="/contact" component={Contact} />
