@@ -214,7 +214,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="reveal">
               <img
-                src="/manus-storage/susan-headshot_3c40effc.png"
+                src="/manus-storage/susan-headshot-v2_b84b6888.webp"
                 alt="Susan Rodriguez - Founder of ASAP Accounting"
                 className="w-full max-w-md mx-auto lg:mx-0 object-cover object-top rounded-sm"
                 style={{aspectRatio:'3/4'}}

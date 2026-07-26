@@ -49,7 +49,7 @@ export default function About() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div className="reveal">
                 <img
-                  src="/manus-storage/susan-headshot_3c40effc.png"
+                  src="/manus-storage/susan-headshot-v2_b84b6888.webp"
                   alt="Susan Rodriguez - Founder of ASAP Accounting"
                   className="w-full max-w-md mx-auto object-cover object-top"
                   style={{aspectRatio: '3/4'}}
