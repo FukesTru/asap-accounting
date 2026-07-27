@@ -49,7 +49,7 @@ export default function About() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div className="reveal">
                 <img
-                  src="/manus-storage/susan-headshot-v2_b84b6888.webp"
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663303940668/kRQoYpFbzatwBsho.webp"
                   alt="Susan Rodriguez - Founder of ASAP Accounting"
                   className="w-full max-w-md mx-auto object-cover object-top"
                   style={{aspectRatio: '3/4'}}
@@ -128,7 +128,7 @@ export default function About() {
               </div>
               <div className="order-1 lg:order-2 reveal" style={{transitionDelay:'80ms'}}>
                 <img
-                  src="/manus-storage/nubia-medina-headshot_1116f78b.webp"
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663303940668/SNltUbYzubZKZfyk.webp"
                   alt="Nubia Medina - Accountant at ASAP Accounting"
                   className="w-full max-w-md mx-auto object-cover object-top"
                   style={{aspectRatio: '3/4'}}
